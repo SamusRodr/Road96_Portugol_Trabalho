@@ -1,14 +1,18 @@
 programa
 {
 	inclua biblioteca Util --> Ut
+
+
+	inteiro dialogo_escolha // serve para determinar a escolha do player :)
+	inteiro din  // din = abreviacao para dinheiro :)
+	inteiro en  // en = abreviacao para energia :)
+
+
 	
-	inteiro din // din = abreviacao de dinheiro :)
-	inteiro en // en = abreviacao de energia :)
-	inteiro dialogo_escolha // serve para determinar as escolhas do personagem :)
 	funcao inicio()
 	{
 
-          escreva("Seja Bem Vindo Ao :\n") Ut.aguarde(2000)
+          escreva("Seja Bem Vindo Ao \n") Ut.aguarde(2000)
 
 		
 		escreva("      ..........:::::::::;;;;;;;;;++++++xxxxxxxxxXXXX$$$$$$&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&$$$$XXxx\n")
@@ -62,81 +66,76 @@ programa
 		escreva("│  e com as decisões que você vai tomar ao longo do caminho.                                              │\n" )Ut.aguarde(2500)
 		escreva("│                                                                                                         │\n" )Ut.aguarde(2500)
 		escreva("│  Cada decisão sua pode mudar o seu futuro, e também o futuro de PETRIA.                                 │\n" )Ut.aguarde(2500)
-		escreva("│  Cuidado com os policiais corruptos, não fique sem energia e tente guardar o máximo de dinheiro.        │\n" )Ut.aguarde(2500)
+		escreva("│  Cuidado com os policiais corruptos, não fique sem energia, tente guardar o máximo de dinheiro          │\n" )Ut.aguarde(2500)
+		escreva("│  E não coma comida estragada...                                                                         │\n" )Ut.aguarde(2500)
 		escreva("│                                                                                                         │\n" )Ut.aguarde(2500)
 		escreva("│  Tudo bem, até mais                                                                                     │\n" )Ut.aguarde(2500)
-		escreva("│  Talvez nos vejamos do outro lado...                                                                    │\n" )Ut.aguarde(2500)
-		escreva("│                                                                                                         │\n" )
+		escreva("│  Talvez nos vejamos mais tarde...                                                                       │\n" )
+	     escreva("│                                                                                                         │\n" )
 		escreva("╰─────────────────────────────────────────────────────────────────────────────────────────────────────────╯\n" )
 
 
-		escreva("11 de junho de 1996\n\n")
+		escreva("° 11 de junho de 1996 °\n\n")Ut.aguarde(2000)
+		escreva("* 1498 KM para a fronteira *\n\n")Ut.aguarde(2000)
+		escreva("° 12 de junho de 1996 °\n\n")Ut.aguarde(2000)
+		escreva("~~ ABOUT A GIRL ~~\n\n")Ut.aguarde(2500)
+
 		din = sorteia(5, 20)
 		en = sorteia(3, 7)
-		escreva("12 de junho de 1996\n\n")
 
-		ABOUT_A_GIRL()
+		escreva("*  Energia = ", en, "  *\n")Ut.aguarde(500)
+		escreva("*  Dinheiro = ", din, "  *\n")Ut.aguarde(2000)
+
+		escreva("╭────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮\n")
+		escreva("│                                                                                                                    │\n" )
+		escreva("│  Você está no meio da estrada, caminhando em um lugar desconhecido, você vê cartazes de politicos jogados no chão  │\n")Ut.aguarde(3000)
+		escreva("│  Você continua andando a direção de uma colina até ver um cara desconhecido falando sozinho...                     │\n")Ut.aguarde(3000)
+		escreva("│                                                                                                                    │\n" )
+		escreva("╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯\n")
+          escreva("Homem desconhecido: Logo ela, logo ela uma maldita policial!!\n") Ut.aguarde(3000)
+          escreva("** Falando aparentemento como se estivesse bêbado **\n\n")Ut.aguarde(3000)
+          escreva("1- Ela quem?\n")
+          escreva("2- Ei! Você está bem??\n\n")
+          leia(dialogo_escolha)Ut.aguarde(100)
+
+          escolha(dialogo_escolha)
+          {
+          	caso 1:
+          	escreva("\n\nHomem desconhecido: A mulher quem eu deveria encontrar, mas ela é um policial, e eu não fui, estraguei tudo, então eu fiquei bêbado.\n\n")Ut.aguarde(3000)
+          	escreva("1- E dai que ela é policial??\n\n")
+          	leia(dialogo_escolha)Ut.aguarde(1000)
+
+          	escolha(dialogo_escolha){
+          		
+                    caso 1:
+          		escreva("\n\nHomem desconhecido: O problema garoto é que eu sou um dos criminosos mais procurados de toda PETRIA\n\n\n")Ut.aguarde(3000)
+          		pare
+          		
+          	}
+          	pare
+
+
+          	caso 2:
+          	escreva("\n\nHomem desconhecido: ...\nHomem Desconhecido: Você é só um adolecente querendo carona né?\n\n")
+          	pare
+          }
+
+
+          escreva("Homem desconhecido: Mas esquece isso, alías meu nome é Jonh")Ut.aguarde(2000)
+          escreva("\n\n---------- VOCÊ CONHECEU JONH ----------")
+          
+
+          
+
+
+      
 		
-
 		
-
 
 		
 	}
 
-	funcao ABOUT_A_GIRL()
-	{
-        escreva("~~~~~~~~~ ABOUT A GIRL ~~~~~~~~~\n") Ut.aguarde(3000) 
-        
-        
-        escreva("Energia = ", en, "\n")Ut.aguarde(500) 
-        escreva("Dinheiro = R$", din, "\n" )Ut.aguarde(2500) 
-        
-        
-        
-        escreva("╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────╮\n" )
-        escreva("│                                                                                                               │\n" )
-        escreva("│  Você está camihando em um lugar desconhecido no meio da estrada                                              │\n" )Ut.aguarde(2500) 
-        escreva("│  Você encontra muitos papéis de políticos jogados no chão,                                                    │\n" )Ut.aguarde(2500)
-        escreva("│  E enquanto você está caminhando, você encontra um * Homem desconhecido * andando na direção de um monte ...  │\n") Ut.aguarde(2500)                                   
-        escreva("│                                                                                                               │\n" )
-        escreva("╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯\n" )
-
-
-        escreva("Homem desconhecido: Logo ela, logo ela uma malditaa policial!!\n")Ut.aguarde(2500) 
-        escreva("* Ele fala aparentemente bêbado *\n\n")Ut.aguarde(1500) 
-        escreva("1- Ela? Ela quem?\n")Ut.aguarde(1500) 
-        escreva("2- Você está bem?\n\n")Ut.aguarde(1500) 
-        leia(dialogo_escolha)
-
-        escolha(dialogo_escolha)
-        {
-
-        	caso 1:
-        	dialogo_escolha = 0
-        	escreva("\nHomem desconhecido: A mulher que eu deveria encontrar, mas ela é uma poolicial, e eu não fuui, estraguuei tudo, então eu fiquei beeem bêbado\n\n")Ut.aguarde(2500) 
-        	escreva("1- E daí que ela é policial?")
-        	leia(dialogo_escolha)
-
-        	escolha(dialogo_escolha){
-
-        		caso 1:
-        		dialogo_escolha = 0
-        		escreva("Homem desconhecido: O problema garoto é que eu sou um dos criminosos mais procurados de toda PETRIA!!")
-        		pare
-        	}
-        	 	    	
-
-        	caso 2:
-        	escreva("Homem desconhecido: Você é só mais um dos adolescentes querendo carona né?\n")Ut.aguarde(2500) 
-        	escreva("* E ele brutalmente ignora sua pergunta *\n\n")Ut.aguarde(1500) 
-        	pare
-        }
-
-       escreva("Homem desconhecido: Esquece isso, aliás meu nome é JONH.\n\n")  
-       escreva("---------- VOCÊ CONHECEU JONH ----------")
-        
-        
-		
-	}
+	
+	
+	
 }
