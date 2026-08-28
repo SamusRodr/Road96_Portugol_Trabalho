@@ -6,7 +6,8 @@ programa
 	inteiro dialogo_escolha // serve para determinar a escolha do player :)
 	inteiro din  // din = abreviacao para dinheiro :)
 	inteiro en  // en = abreviacao para energia :)
-
+	inteiro ev_sorte_bot // serve para fazer os "minigames"
+     inteiro ev_sorte_py
 
 	
 	funcao inicio()
@@ -74,14 +75,30 @@ programa
 	     escreva("│                                                                                                         │\n" )
 		escreva("╰─────────────────────────────────────────────────────────────────────────────────────────────────────────╯\n" )
 
-
+          din = sorteia(5, 20)
+		en = sorteia(3, 7)
+          
 		escreva("° 11 de junho de 1996 °\n\n")Ut.aguarde(2000)
 		escreva("* 1498 KM para a fronteira *\n\n")Ut.aguarde(2000)
-		escreva("° 12 de junho de 1996 °\n\n")Ut.aguarde(2000)
+
+		ABOUT_A_GIRL()
+		
+
+          
+
+
+      
+		
+		
+
+		
+	}
+	funcao ABOUT_A_GIRL()
+     {
+     	escreva("° 12 de junho de 1996 °\n\n")Ut.aguarde(2000)
 		escreva("~~ ABOUT A GIRL ~~\n\n")Ut.aguarde(2500)
 
-		din = sorteia(5, 20)
-		en = sorteia(3, 7)
+		
 
 		escreva("*  Energia = ", en, "  *\n")Ut.aguarde(500)
 		escreva("*  Dinheiro = ", din, "  *\n")Ut.aguarde(2000)
@@ -116,25 +133,81 @@ programa
 
 
           	caso 2:
-          	escreva("\n\nHomem desconhecido: ...\nHomem Desconhecido: Você é só um adolecente querendo carona né?\n\n")
+          	escreva("\n\nHomem desconhecido: ...\nHomem Desconhecido: Você é só um adolecente querendo carona né?\n\n")Ut.aguarde(2000)
           	pare
+
           }
 
 
           escreva("Homem desconhecido: Mas esquece isso, alías meu nome é Jonh")Ut.aguarde(2000)
-          escreva("\n\n---------- VOCÊ CONHECEU JONH ----------")
+          escreva("\n\n---------- VOCÊ CONHECEU JONH ----------")Ut.aguarde(2000)
+          escreva("\n\nJonh: Você quer correr até o topo daquela colina?\n\n")Ut.aguarde(2000)
+          escreva("1- ...\n\n")Ut.aguarde(500)
+          escreva("2- Sim?\n\n")Ut.aguarde(500)
+          escreva("3- Por que?\n\n")Ut.aguarde(500)
+          leia(dialogo_escolha)
+
+          escolha(dialogo_escolha)
+          {
+          	caso 1:
+          	escreva("\nJohn: Você não disse nada então é um sim!\n")Ut.aguarde(2000)
+          	pare
+
+          	caso 2:
+          	escreva("\nJohn: Ok\n")Ut.aguarde(2000)
+          	pare
+
+          	caso 3:
+          	escreva("\nJohn: Por que sim pae\n")Ut.aguarde(2000)
+          	pare
+          }
+
+          escreva("\nJohn: Então vamos!!\n\n")
           
 
+          escreva("╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮\n")
+          escreva("│                                            *** TUTORIAL ***                                                         │\n" )
+          escreva("│                                                                                                                     │\n")Ut.aguarde(3000)
+          escreva("│  Aqui terá uma corrida, o bot terá um número aleatorio e você também, se os seus números forem iguais você perde,   │\n")Ut.aguarde(3000)
+          escreva("│  mas se os números forem iguaís vc ganha, quanto mais a situação é favorável para você                              │\n")Ut.aguarde(3000)
+          escreva("│  mais chance terá de ganhar (Exemplo: O Jonh está bêbado então ele não consigira correr tão rapido)                 │\n")Ut.aguarde(3000)
+          escreva("│  mas se a situação estiver favorável para o bot menos chance terá de ganhar (Exemplo: caso o Jonh estivesse sóbrio  │\n")Ut.aguarde(3000)
+          escreva("│  e tivesse um físico melhor que o seu mais difícil será para você, isso tudo dependo da sua sorte.                  │\n")Ut.aguarde(3000)
+          escreva("│                                                                                                                     │\n")Ut.aguarde(3000)
+          escreva("│  Então Boa Sorte :)                                                                                                 │\n")Ut.aguarde(3000)
+          escreva("│                                                                                                                     │\n" )
+          escreva("╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯\n")Ut.aguarde(1500)
+
+          ev_sorte_bot = sorteia(1, 3)
+          ev_sorte_py = sorteia(1, 7)
+
+          minigame()
           
 
 
-      
-		
-		
+          
+     }
 
-		
-	}
+     funcao minigame()
+     {
+      se(ev_sorte_bot == ev_sorte_py){
 
+      	escreva("Seu Número: ", ev_sorte_py, "\nNúmero do bot: ", ev_sorte_bot )Ut.aguarde(3000)
+      	
+      	escreva("\n\nVocê perdeu mais sorte na próxima :) ")Ut.aguarde(3000)
+
+		}
+		senao{
+			
+			escreva("Seu Número: ", ev_sorte_py, "\nNúmero do bot: ", ev_sorte_bot )Ut.aguarde(3000)
+			
+			escreva("\n\nParabéns você ganhou!!")Ut.aguarde(3000)
+
+		}
+         
+
+     	
+     }
 	
 	
 	
