@@ -10,6 +10,7 @@ programa
      inteiro ev_sorte_py // serve para fazer os "minigames" (determina o número do player) :)
      inteiro vitoria = 0 // serve para determinar se você ganhou, e para dar a recompensa :)
      inteiro ganho // serve para determinar seu ganho :)
+     inteiro dia = 11 // serve para fazer o sistema de dias diferentes :)
 
 	
 	funcao inicio()
@@ -85,6 +86,8 @@ programa
 		escreva("\n\n° 11 de junho de 1996 °\n\n")Ut.aguarde(2000)
 		escreva("* 1498 KM para a fronteira *\n\n")Ut.aguarde(2000)
 
+		dia = (sorteia(1, 2)) + dia
+
 		ABOUT_A_GIRL()
 		
 
@@ -97,9 +100,9 @@ programa
 
 		
 	}
-	funcao ABOUT_A_GIRL()
+	funcao ABOUT_A_GIRL() // CAPÍTULO DO JOHN
      {
-     	escreva("° 12 de junho de 1996 °\n\n")Ut.aguarde(2000)
+     	escreva("° ", dia, " de junho de 1996 °\n\n")Ut.aguarde(2000)
 		escreva("~~ ABOUT A GIRL ~~\n\n")Ut.aguarde(2500)
 
 		
@@ -226,7 +229,7 @@ programa
 		escreva("╰─────────────────────────────────────────────────────────────────────────────────────────────────────────╯\n" )
 
 
-		escreva("John: ...\n\n")
+		escreva("\nJohn: ...\n\n")
 		escreva("[1]- É seguro dormir sobre as estrelas??\n\n")Ut.aguarde(500)
 		escreva("[2]- Como manter as energias na estrada??\n\n")Ut.aguarde(500)
 		escreva("[3]- Dicas sobre como atravessar a fronteira??\n\n")Ut.aguarde(2000)
@@ -285,10 +288,10 @@ programa
 		}
 
 
-		escreva("~~ ABOUT A GIRL ~~\n\n")Ut.aguarde(1000)
-		escreva("--- FINALIZADO ---")
+		escreva("~~ ABOUT A GIRL ~~\n")Ut.aguarde(1000)
+		escreva("-- FINALIZADO --")
 
-		
+		dia = (sorteia(1, 2)) + dia
 
 
 		
@@ -302,16 +305,16 @@ programa
      {
       se(ev_sorte_bot == ev_sorte_py){
 
-      	escreva("\n\nSeu Número: ", ev_sorte_py, "\nNúmero do bot: ", ev_sorte_bot )Ut.aguarde(3000)
+      	escreva("\n\nSeu Número: ", ev_sorte_py, "\nNúmero do bot: ", ev_sorte_bot )Ut.aguarde(1500)
       	
-      	escreva("\n\nVocê perdeu mais sorte na próxima :) ")Ut.aguarde(3000)
+      	escreva("\n\nVocê perdeu mais sorte na próxima :) ")Ut.aguarde(2000)
 
 		}
 		senao{
 			
-			escreva("\n\nSeu Número: ", ev_sorte_py, "\nNúmero do bot: ", ev_sorte_bot )Ut.aguarde(3000)
+			escreva("\n\nSeu Número: ", ev_sorte_py, "\nNúmero do bot: ", ev_sorte_bot )Ut.aguarde(1500)
 			
-			escreva("\n\nParabéns você ganhou!!")Ut.aguarde(3000)
+			escreva("\n\nParabéns você ganhou!!")Ut.aguarde(2000)
 
 			vitoria = 1
 
@@ -320,7 +323,60 @@ programa
 
      	
      }
+
+     funcao FIRE_STARTER() // CAPÍTULO DA ZOE
+     {
+     	escreva("° ", dia, " de junho de 1996 °\n\n")Ut.aguarde(2000)
+     	escreva("~~ FIRE STARTER ~~\n\n")Ut.aguarde(2500)
+
+
+     	escreva("*  Energia = ", en, "  *\n")Ut.aguarde(500)
+		escreva("*  Dinheiro = $ ", din, "  *\n")Ut.aguarde(2000)
+
+
+		escreva("╭─────────────────────────────────────────────────────────────────────────────────────────────────────────╮\n" )
+		escreva("│                                                                                                         │\n" )
+		escreva("│                                       *** HISTÓRIA ***                                                  │\n" )Ut.aguarde(500)
+		escreva("│                                                                                                         │\n" )Ut.aguarde(2000)
+		escreva("│  Depois de um longo tempo na estrada, você finalmente chega em um estabelecimento                       │\n" )Ut.aguarde(2500)
+		escreva("│  Parece ser um posto de gasolina, você vê um outdoor de TYRAK do lado, mas você nota algo estranho      │\n" )Ut.aguarde(2500)
+		escreva("│  Tinha uma garota ruiva, tem mais ou menos sua idade, presa ao lado de um carro da polícia              │\n" )Ut.aguarde(2500)
+		escreva("│  Você decide se aproximar para ver o que está acontecendo...                                            │\n" )Ut.aguarde(2500)
+	     escreva("│                                                                                                         │\n" )
+		escreva("╰─────────────────────────────────────────────────────────────────────────────────────────────────────────╯\n" )
+
+
+		escreva("\n Garota ruiva: Ei, ei! Aqui! Me ajuda\n")
+		escreva("* Ela fala susurrando *\n")
+		escreva("[1]- Você está bem?\n")
+		escreva("[2]- Por que você está algemada?\n\n")
+		leia(dialogo_escolha)
+
+		escolha(dialogo_escolha)
+		{
+               caso 1:
+               escreva("Garota ruiva: Não deixe que eles te vejam!\n")
+               pare
+
+               caso 2:
+               escreva("Garota ruiva: Depois eu te conto, não deixe que eles te vejam!\n")
+               pare
+			
+		}
+		escreva("[1]- Eles quem?\n\n")
+		leia(dialogo_escolha)
+
+		escolha(dialogo_escolha)
+		{
+			caso 1:
+			escreva()
+		}
+
+     }
 	
+	
+	
+}
 	
 	
 }
