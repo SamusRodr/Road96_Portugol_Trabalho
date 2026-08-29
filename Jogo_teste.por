@@ -88,7 +88,7 @@ programa
 
 		dia = (sorteia(1, 2)) + dia
 
-		ABOUT_A_GIRL()
+		FIRE_STARTER()
 		
 
           
@@ -340,14 +340,14 @@ programa
 		escreva("│                                                                                                         │\n" )Ut.aguarde(2000)
 		escreva("│  Depois de um longo tempo na estrada, você finalmente chega em um estabelecimento                       │\n" )Ut.aguarde(2500)
 		escreva("│  Parece ser um posto de gasolina, você vê um outdoor de TYRAK do lado, mas você nota algo estranho      │\n" )Ut.aguarde(2500)
-		escreva("│  Tinha uma garota ruiva, tem mais ou menos sua idade, presa ao lado de um carro da polícia              │\n" )Ut.aguarde(2500)
+		escreva("│  Tinha uma garota ruiva, tem mais ou menos sua idade, presa ao lado de uma van da polícia               │\n" )Ut.aguarde(2500)
 		escreva("│  Você decide se aproximar para ver o que está acontecendo...                                            │\n" )Ut.aguarde(2500)
 	     escreva("│                                                                                                         │\n" )
 		escreva("╰─────────────────────────────────────────────────────────────────────────────────────────────────────────╯\n" )
 
 
-		escreva("\n Garota ruiva: Ei, ei! Aqui! Me ajuda\n")
-		escreva("* Ela fala susurrando *\n")
+		escreva("\nGarota ruiva: Ei, ei! Aqui! Me ajuda\n\n")
+		escreva("* Ela fala susurrando *\n\n")
 		escreva("[1]- Você está bem?\n")
 		escreva("[2]- Por que você está algemada?\n\n")
 		leia(dialogo_escolha)
@@ -369,14 +369,43 @@ programa
 		escolha(dialogo_escolha)
 		{
 			caso 1:
-			escreva()
+			escreva("Garota ruiva: Os policiais, eles me pegaram na estrada.\n\n")
+			pare
 		}
+		escreva("[1]- Por que eles fariam isso?\n\n")
+		leia(dialogo_escolha)
+
+		escolha(dialogo_escolha)
+		{
+			caso 1:
+			escreva("Garota ruiva: Meu pai deve ter descoberto onde eu tava.\n\n")
+		}
+
+		escreva("[1]- Como posso te ajudar??\n")
+		escreva("[2]- Quem é o seu pai??\n\n")
+		leia(dialogo_escolha)
+
+		escolha(dialogo_escolha)
+		{
+			caso 1:
+			escreva("Garota ruiva: Pega a chave da van com os policiais\n")
+			escreva("Garota ruiva: Mas você vai precisar distrair eles de alguma forma.\n\n")
+			pare
+
+			caso 2 
+			escreva("Garota ruiva: Eu posso te contar depois, agora eu preciso que você me ajude!\n\n")
+			pare
+		}
+
+		escreva("[1]- Ok. Vou pelo menos tentar.\n\n")
+		leia(dialogo_escolha)
+
+		
 
      }
 	
 	
 	
 }
-	
 	
 }
