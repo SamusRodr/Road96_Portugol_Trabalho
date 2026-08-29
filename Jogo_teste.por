@@ -11,6 +11,7 @@ programa
      inteiro vitoria = 0 // serve para determinar se você ganhou, e para dar a recompensa :)
      inteiro ganho // serve para determinar seu ganho :)
      inteiro dia = 11 // serve para fazer o sistema de dias diferentes :)
+     inteiro dec_errada = 0 // serve para finalizar o jogo por causa de uma decisão que você errou :) 
 
 	
 	funcao inicio()
@@ -355,11 +356,11 @@ programa
 		escolha(dialogo_escolha)
 		{
                caso 1:
-               escreva("Garota ruiva: Não deixe que eles te vejam!\n")
+               escreva("\n\nGarota ruiva: Não deixe que eles te vejam!\n")
                pare
 
                caso 2:
-               escreva("Garota ruiva: Depois eu te conto, não deixe que eles te vejam!\n")
+               escreva("\n\nGarota ruiva: Depois eu te conto, não deixe que eles te vejam!\n")
                pare
 			
 		}
@@ -369,7 +370,7 @@ programa
 		escolha(dialogo_escolha)
 		{
 			caso 1:
-			escreva("Garota ruiva: Os policiais, eles me pegaram na estrada.\n\n")
+			escreva("\n\nGarota ruiva: Os policiais, eles me pegaram na estrada.\n\n")
 			pare
 		}
 		escreva("[1]- Por que eles fariam isso?\n\n")
@@ -378,7 +379,7 @@ programa
 		escolha(dialogo_escolha)
 		{
 			caso 1:
-			escreva("Garota ruiva: Meu pai deve ter descoberto onde eu tava.\n\n")
+			escreva("\n\nGarota ruiva: Meu pai deve ter descoberto onde eu tava.\n\n")
 		}
 
 		escreva("[1]- Como posso te ajudar??\n")
@@ -388,24 +389,44 @@ programa
 		escolha(dialogo_escolha)
 		{
 			caso 1:
-			escreva("Garota ruiva: Pega a chave da van com os policiais\n")
+			escreva("\n\nGarota ruiva: Pega a chave da van com os policiais\n")
 			escreva("Garota ruiva: Mas você vai precisar distrair eles de alguma forma.\n\n")
 			pare
 
-			caso 2 
-			escreva("Garota ruiva: Eu posso te contar depois, agora eu preciso que você me ajude!\n\n")
+			caso 2: 
+			escreva("\n\nGarota ruiva: Eu posso te contar depois, agora eu preciso que você me ajude!\n\n")
 			pare
 		}
 
 		escreva("[1]- Ok. Vou pelo menos tentar.\n\n")
 		leia(dialogo_escolha)
 
+		escolha(dialogo_escolha)
+		{
+			caso 1:
+			escreva("\n\nGarota ruiva: Obrigada!\n\n")
+			pare
+		}
+
+		
+          escreva("╭─────────────────────────────────────────────────────────────────────────────────────────────────────────╮\n" )
+		escreva("│                                                                                                         │\n" )
+		escreva("│                                       *** HISTÓRIA ***                                                  │\n" )Ut.aguarde(500)
+		escreva("│                                                                                                         │\n" )Ut.aguarde(2000)
+		escreva("│  Você vê dois policiais sentados em uma mesa do lado de fora do estabelecimento                         │\n" )Ut.aguarde(2500)
+		escreva("│  O que você pretende fazer agora?                                                                       │\n" )Ut.aguarde(2500)		
+	     escreva("│                                                                                                         │\n" )
+		escreva("╰─────────────────────────────────────────────────────────────────────────────────────────────────────────╯\n" )
+
+		escreva("\n(1)- Roubar as chaves na frente dos policiais.\n")   //(x)- serve para decidir ações 
+		escreva("(2)- Ir para os fundos para procurar algo útil.\n\n")      //[x]- serve para decidir díalogos 
+          leia(dialogo_escolha)
+				
+
 		
 
      }
+     
 	
-	
-	
-}
 	
 }
