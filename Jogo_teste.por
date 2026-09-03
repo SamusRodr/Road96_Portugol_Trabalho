@@ -12,7 +12,7 @@ programa
      inteiro ganho // serve para determinar seu ganho :)
      inteiro dia = 11 // serve para fazer o sistema de dias diferentes :)
      inteiro dec_errada = 0 // serve para finalizar o jogo por causa de uma decisão que você errou :) 
-
+     cadeia continuar
 	
 	funcao inicio()
 	{
@@ -79,7 +79,9 @@ programa
 		escreva("│  Tudo bem, até mais                                                                                     │\n" )Ut.aguarde(2500)
 		escreva("│  Talvez nos vejamos mais tarde...                                                                       │\n" )
 	     escreva("│                                                                                                         │\n" )
-		escreva("╰─────────────────────────────────────────────────────────────────────────────────────────────────────────╯\n" )
+		escreva("╰─────────────────────────────────────────────────────────────────────────────────────────────────────────╯\n" )		
+		
+		ent_continuar()
 
           din = sorteia(5, 20)
 		en = sorteia(3, 7)
@@ -89,7 +91,7 @@ programa
 
 		dia = (sorteia(1, 2)) + dia
 
-		FIRE_STARTER()
+		ABOUT_A_GIRL()
 		
 
           
@@ -119,7 +121,10 @@ programa
 		escreva("│  Você continua andando a direção de uma colina até ver um cara desconhecido falando sozinho...                     │\n")Ut.aguarde(3000)
 		escreva("│                                                                                                                    │\n" )
 		escreva("╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯\n")
-          escreva("Homem desconhecido: Logo ela, logo ela uma maldita policial!!\n") Ut.aguarde(3000)
+
+		ent_continuar()
+		
+          escreva("\n\nHomem desconhecido: Logo ela, logo ela uma maldita policial!!\n") Ut.aguarde(3000)
           escreva("** Falando aparentemento como se estivesse bêbado **\n\n")Ut.aguarde(3000)
           escreva("[1]- Ela quem?\n")
           escreva("[2]- Ei! Você está bem??\n\n")
@@ -182,13 +187,15 @@ programa
           escreva("│                                                                                                                     │\n")Ut.aguarde(1000)
           escreva("│  Aqui terá uma corrida, o bot terá um número aleatorio e você também, se os seus números forem iguais você perde,   │\n")Ut.aguarde(3500)
           escreva("│  mas se os números forem diferentes vc ganha. quanto mais a situação é favorável para você                          │\n")Ut.aguarde(3500)
-          escreva("│  mais chance terá de ganhar (Exemplo: O Jonh está bêbado então ele não consigira correr tão rapido)                 │\n")Ut.aguarde(3400)
+          escreva("│  mais chance terá de ganhar (Exemplo: O Jonh está bêbado então ele não consiguira correr tão rapido)                │\n")Ut.aguarde(3400)
           escreva("│  mas se a situação estiver favorável para o bot menos chance terá de ganhar (Exemplo: caso o Jonh estivesse sóbrio  │\n")Ut.aguarde(3500)
           escreva("│  e tivesse um físico melhor que o seu mais difícil será para você), isso tudo dependo da sua sorte.                 │\n")Ut.aguarde(3500)
           escreva("│                                                                                                                     │\n")Ut.aguarde(3500)
           escreva("│  Então Boa Sorte :)                                                                                                 │\n")Ut.aguarde(1000)
           escreva("│                                                                                                                     │\n" )
           escreva("╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯\n")Ut.aguarde(1500)
+
+          ent_continuar()
 
           ev_sorte_bot = sorteia(1, 3) // já que a situação é favorável a você a chance de você ganhar é 6/7 ou 85,72% de ganhar 
           ev_sorte_py = sorteia(1, 7) // e de perder é 1/7 ou 14,28% de perder
@@ -229,8 +236,9 @@ programa
 	     escreva("│                                                                                                         │\n" )
 		escreva("╰─────────────────────────────────────────────────────────────────────────────────────────────────────────╯\n" )
 
-
-		escreva("\nJohn: ...\n\n")
+          ent_continuar()
+          
+		escreva("\n\nJohn: ...\n\n")
 		escreva("[1]- É seguro dormir sobre as estrelas??\n\n")Ut.aguarde(500)
 		escreva("[2]- Como manter as energias na estrada??\n\n")Ut.aguarde(500)
 		escreva("[3]- Dicas sobre como atravessar a fronteira??\n\n")Ut.aguarde(2000)
@@ -302,7 +310,7 @@ programa
           
      }
 
-     funcao minigame()
+     funcao minigame() // SERVE PARA O SISTEMA DOS MINIGAMES
      {
       se(ev_sorte_bot == ev_sorte_py){
 
@@ -346,8 +354,9 @@ programa
 	     escreva("│                                                                                                         │\n" )
 		escreva("╰─────────────────────────────────────────────────────────────────────────────────────────────────────────╯\n" )
 
+		ent_continuar()
 
-		escreva("\nGarota ruiva: Ei, ei! Aqui! Me ajuda\n\n")
+		escreva("\n\nGarota ruiva: Ei, ei! Aqui! Me ajuda\n\n")
 		escreva("* Ela fala susurrando *\n\n")
 		escreva("[1]- Você está bem?\n")
 		escreva("[2]- Por que você está algemada?\n\n")
@@ -356,7 +365,7 @@ programa
 		escolha(dialogo_escolha)
 		{
                caso 1:
-               escreva("\n\nGarota ruiva: Não deixe que eles te vejam!\n")
+               escreva("\nGarota ruiva: Não deixe que eles te vejam!\n")
                pare
 
                caso 2:
@@ -418,15 +427,48 @@ programa
 	     escreva("│                                                                                                         │\n" )
 		escreva("╰─────────────────────────────────────────────────────────────────────────────────────────────────────────╯\n" )
 
-		escreva("\n(1)- Roubar as chaves na frente dos policiais.\n")   //(x)- serve para decidir ações 
+		ent_continuar()
+
+		escreva("\n\n(1)- Roubar as chaves na frente dos policiais.\n")   //(x)- serve para decidir ações 
 		escreva("(2)- Ir para os fundos para procurar algo útil.\n\n")      //[x]- serve para decidir díalogos 
           leia(dialogo_escolha)
 				
+		escolha(dialogo_escolha)
+		{
+			caso 1:
+			dec_errada = dec_errada + 1
+			game_over()
+			
+			pare
 
+			caso 2:
+		}
 		
 
      }
-     
+     funcao game_over() // SERVE PARA DAR O GAME OVER :)
+     {
+     	se(en <= 0){
+     		escreva("\n\nVOCÊ FICOU SEM ENERGIA E FOI PEGO PELA POLICIA E FOI LEVADO PARA OS POÇOS\n\n")
+     		escreva("- - - GAME OVER - - -")
+
+     		Ut.aguarde(10000000)
+     		
+     		
+
+		}
+		se(dec_errada == 1){
+			escreva("\n\nVOCÊ FEZ ALGO INCRIVELMENTE ESTÚPIDO E FOI MORTO PELA POLÍCIA\n\n")
+			escreva("- - - GAME OVER - - -")
+     		Ut.aguarde(10000000)
+		}
+     }
+
+     funcao ent_continuar() // SERVE PARA O SISTEMA DE "PRESSIONE [ENTER] PARA CONTINUAR
+     {
+     	escreva("\n\nPressione [ENTER] para continuar")
+		leia(continuar)
+     }
 	
 	
 }
