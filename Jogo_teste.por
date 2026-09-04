@@ -70,7 +70,7 @@ programa
 		escreva("│                                                                                                         │\n" )Ut.aguarde(2000)
 		escreva("│  É muito perigoso tentar atravessar a fronteira.                                                        │\n" )Ut.aguarde(2500)
 		escreva("│  Você precisa tomar cuidado com as pessoas que você encontra no caminho                                 │\n" )Ut.aguarde(2500)
-		escreva("│  e com as decisões que você vai tomar ao longo do caminho.                                              │\n" )Ut.aguarde(2500)
+		escreva("│  e com as decisões que você vai tomar ao longo da sua jornada.                                          │\n" )Ut.aguarde(2500)
 		escreva("│                                                                                                         │\n" )Ut.aguarde(1500)
 		escreva("│  Cada decisão sua pode mudar o seu futuro, e também o futuro de PETRIA.                                 │\n" )Ut.aguarde(2500)
 		escreva("│  Cuidado com os policiais corruptos, não fique sem energia, tente guardar o máximo de dinheiro          │\n" )Ut.aguarde(2500)
@@ -91,7 +91,7 @@ programa
 
 		dia = (sorteia(1, 2)) + dia
 
-		ABOUT_A_GIRL()
+		FIRE_STARTER()
 		
 
           
@@ -103,7 +103,7 @@ programa
 
 		
 	}
-	funcao ABOUT_A_GIRL() // CAPÍTULO DO JOHN
+	funcao ABOUT_A_GIRL() // CAPÍTULO DO JOHN == FINALIZADO
      {
      	escreva("° ", dia, " de junho de 1996 °\n\n")Ut.aguarde(2000)
 		escreva("~~ ABOUT A GIRL ~~\n\n")Ut.aguarde(2500)
@@ -124,7 +124,7 @@ programa
 
 		ent_continuar()
 		
-          escreva("\n\nHomem desconhecido: Logo ela, logo ela uma maldita policial!!\n") Ut.aguarde(3000)
+          escreva("\n\nHomem desconhecido: Logo ela, logo ela uma maldita policial!!\n\n") Ut.aguarde(3000)
           escreva("** Falando aparentemento como se estivesse bêbado **\n\n")Ut.aguarde(3000)
           escreva("[1]- Ela quem?\n")
           escreva("[2]- Ei! Você está bem??\n\n")
@@ -356,64 +356,64 @@ programa
 
 		ent_continuar()
 
-		escreva("\n\nGarota ruiva: Ei, ei! Aqui! Me ajuda\n\n")
-		escreva("* Ela fala susurrando *\n\n")
-		escreva("[1]- Você está bem?\n")
-		escreva("[2]- Por que você está algemada?\n\n")
-		leia(dialogo_escolha)
+		escreva("\n\nGarota ruiva: Ei, ei! Aqui! Me ajuda\n\n")Ut.aguarde(3000)
+		escreva("* Ela fala susurrando *\n\n")Ut.aguarde(500)
+		escreva("[1]- Você está bem?\n")Ut.aguarde(500)
+		escreva("[2]- Por que você está algemada?\n\n")Ut.aguarde(1000)
+		leia(dialogo_escolha)Ut.aguarde(1000)
 
 		escolha(dialogo_escolha)
 		{
                caso 1:
-               escreva("\nGarota ruiva: Não deixe que eles te vejam!\n")
+               escreva("\nGarota ruiva: Não deixe que eles te vejam!\n")Ut.aguarde(3000)
                pare
 
                caso 2:
-               escreva("\n\nGarota ruiva: Depois eu te conto, não deixe que eles te vejam!\n")
+               escreva("\n\nGarota ruiva: Depois eu te conto, não deixe que eles te vejam!\n")Ut.aguarde(3000)
                pare
 			
 		}
-		escreva("[1]- Eles quem?\n\n")
+		escreva("[1]- Eles quem?\n\n")Ut.aguarde(1000)
 		leia(dialogo_escolha)
 
 		escolha(dialogo_escolha)
 		{
 			caso 1:
-			escreva("\n\nGarota ruiva: Os policiais, eles me pegaram na estrada.\n\n")
+			escreva("\n\nGarota ruiva: Os policiais, eles me pegaram na estrada.\n\n")Ut.aguarde(3000)
 			pare
 		}
-		escreva("[1]- Por que eles fariam isso?\n\n")
-		leia(dialogo_escolha)
+		escreva("[1]- Por que eles fariam isso?\n\n")Ut.aguarde(1000)
+		leia(dialogo_escolha)Ut.aguarde(1000)
 
 		escolha(dialogo_escolha)
 		{
 			caso 1:
-			escreva("\n\nGarota ruiva: Meu pai deve ter descoberto onde eu tava.\n\n")
+			escreva("\n\nGarota ruiva: Meu pai deve ter descoberto onde eu estava.\n\n")Ut.aguarde(3000)
 		}
 
-		escreva("[1]- Como posso te ajudar??\n")
-		escreva("[2]- Quem é o seu pai??\n\n")
-		leia(dialogo_escolha)
+		escreva("[1]- Como posso te ajudar??\n")Ut.aguarde(500)
+		escreva("[2]- Quem é o seu pai??\n\n")Ut.aguarde(1000)
+		leia(dialogo_escolha)Ut.aguarde(1000)
 
 		escolha(dialogo_escolha)
 		{
 			caso 1:
-			escreva("\n\nGarota ruiva: Pega a chave da van com os policiais\n")
-			escreva("Garota ruiva: Mas você vai precisar distrair eles de alguma forma.\n\n")
+			escreva("\n\nGarota ruiva: Pega a chave da van com os policiais\n")Ut.aguarde(500)
+			escreva("Garota ruiva: Mas você vai precisar distrair eles de alguma forma.\n\n")Ut.aguarde(3000)
 			pare
 
 			caso 2: 
-			escreva("\n\nGarota ruiva: Eu posso te contar depois, agora eu preciso que você me ajude!\n\n")
+			escreva("\n\nGarota ruiva: Eu posso te contar depois, agora eu preciso que você me ajude!\n\n")Ut.aguarde(3000)
 			pare
 		}
 
-		escreva("[1]- Ok. Vou pelo menos tentar.\n\n")
-		leia(dialogo_escolha)
+		escreva("[1]- Ok. Vou pelo menos tentar.\n\n")Ut.aguarde(1000)
+		leia(dialogo_escolha)Ut.aguarde(1000)
 
 		escolha(dialogo_escolha)
 		{
 			caso 1:
-			escreva("\n\nGarota ruiva: Obrigada!\n\n")
+			escreva("\n\nGarota ruiva: Obrigada!\n\n")Ut.aguarde(3000)
 			pare
 		}
 
@@ -437,11 +437,63 @@ programa
 		{
 			caso 1:
 			dec_errada = dec_errada + 1
-			game_over()
-			
+			game_over()			
 			pare
-
 			caso 2:
+			escreva("\n\nPara onde você vai ir primeiro??\n\n")
+		}
+
+		escreva("[1]- Entrar na loja\n")Ut.aguarde(500)
+		escreva("[2]- Ir para os fundos pela direita\n")Ut.aguarde(500)
+		escreva("[3]- Ir para os fundos pela esquerda\n\n")Ut.aguarde(1000)
+		leia(dialogo_escolha)
+
+		escolha(dialogo_escolha)
+		{
+			caso 1:
+			escreva("Você entra na loja e vê os seguintes produtos:")
+			escreva("      LANCHONETE DO CAMPUS      \n")
+		     escreva("[1]- Caixa de fósforos         ==     $ 2.00\n")
+		     escreva("[2]- Raspadinha das estrelas   ==     $ 5.00\n")
+		     escreva("[3]- Raspadinhas do TYRAK      ==     $ 5.00\n\n")
+		     leia(dialogo_escolha)
+
+		     escolha{
+
+		     	caso 1:
+		     	se(din < 2){
+		     		escreva("* * * SALDO INSUFICIENTE, POBRE * * *")
+		     		
+
+		         }senao{
+		         	din = din - 2
+		     	escreva("* * * VOCÊ ADQUIRIU UMA CAIXA DE FÓRSFOROS * * *")
+		     	escreva("*  Dinheiro = $ ", din, "  *\n")Ut.aguarde(2000)
+
+		         }		     	
+		         pare
+		     	
+		     	caso 2:
+		     	se(din < 5){
+		     		escreva("* * * SALDO INSUFICIENTE, POBRE * * *")
+		     		
+
+		         }senao{
+		         	din = din - 2
+		     	escreva("* * * VOCÊ ADQUIRIU UMA RASPADINHA DAS ESTRELAS * * *")
+		     	ganho = (sorteia(2, 35)
+		     	escreva("\n\n Seu ganho foi de $", ganho, "\n\n")
+		     	din = din + ganho
+		     	escreva("*  Dinheiro = $ ", din, "  *\n")Ut.aguarde(2000)
+		     	
+		     }
+		     pare
+
+		     caso 2:
+
+
+		     caso 3:
+		     
 		}
 		
 
