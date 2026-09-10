@@ -91,7 +91,7 @@ programa
 
 		dia = (sorteia(1, 2)) + dia
 
-		FIRE_STARTER()
+          ABOUT_A_GIRL()
 		
 
           
@@ -133,7 +133,7 @@ programa
           escolha(dialogo_escolha)
           {
           	caso 1:
-          	escreva("\n\nHomem desconhecido: A mulher quem eu deveria encontrar, mas ela é um policial, e eu não fui, estraguei tudo, então eu fiquei bêbado.\n\n")Ut.aguarde(3000)
+          	escreva("\n\nHomem desconhecido: A mulher quem eu deveria encontrar, mas ela é um policial e eu não fui, estraguei tudo, então eu fiquei bêbado.\n\n")Ut.aguarde(3000)
           	escreva("1- E dai que ela é policial??\n\n")
           	leia(dialogo_escolha)Ut.aguarde(1000)
 
@@ -175,7 +175,7 @@ programa
           	pare
 
           	caso 3:
-          	escreva("\nJohn: Por que sim pae\n")Ut.aguarde(2000)
+          	escreva("\nJohn: Porque sim pae\n")Ut.aguarde(2000)
           	pare
           }
 
@@ -257,7 +257,7 @@ programa
 			pare
 
 			caso 3:
-			escreva("\nJohn: Bem, é perigoso, disso tenha certeza.")Ut.aguarde(2000)
+			escreva("\nJohn: Bem, é perigoso, disso tenha certeza.\n\n")Ut.aguarde(2000)
 			pare
 		}
 
@@ -440,12 +440,10 @@ programa
 			game_over()			
 			pare
 			caso 2:
-			escreva("\n\nPara onde você vai ir primeiro??\n\n")
+			escreva("\n\nTem uma loja, pode ter algo útil você quer entrar?\n\n")
 		}
 
-		escreva("[1]- Entrar na loja\n")Ut.aguarde(500)
-		escreva("[2]- Ir para os fundos pela direita\n")Ut.aguarde(500)
-		escreva("[3]- Ir para os fundos pela esquerda\n\n")Ut.aguarde(1000)
+		escreva("[1]- Entrar na loja\n")Ut.aguarde(1000)		
 		leia(dialogo_escolha)
 
 		escolha(dialogo_escolha)
@@ -454,11 +452,10 @@ programa
 			escreva("Você entra na loja e vê os seguintes produtos:")
 			escreva("      LANCHONETE DO CAMPUS      \n")
 		     escreva("[1]- Caixa de fósforos         ==     $ 2.00\n")
-		     escreva("[2]- Raspadinha das estrelas   ==     $ 5.00\n")
-		     escreva("[3]- Raspadinhas do TYRAK      ==     $ 5.00\n\n")
+		    
 		     leia(dialogo_escolha)
 
-		     escolha{
+		     escolha(dialogo_escolha){
 
 		     	caso 1:
 		     	se(din < 2){
@@ -472,39 +469,32 @@ programa
 
 		         }		     	
 		         pare
-		     	
-		     	caso 2:
-		     	se(din < 5){
-		     		escreva("* * * SALDO INSUFICIENTE, POBRE * * *")
-		     		
+		     			     			     		     
+				}
 
-		         }senao{
-		         	din = din - 2
-		     	escreva("* * * VOCÊ ADQUIRIU UMA RASPADINHA DAS ESTRELAS * * *")
-		     	ganho = (sorteia(2, 35)
-		     	escreva("\n\n Seu ganho foi de $", ganho, "\n\n")
-		     	din = din + ganho
-		     	escreva("*  Dinheiro = $ ", din, "  *\n")Ut.aguarde(2000)
-		     	
-		     }
-		     pare
-
-		     caso 2:
-
-
-		     caso 3:
-		     
-		}
+		   		
 		
+			}
 
-     }
+			escreva("* * * VOCÊ SAIU DA LOJA * * *")
+			escreva("\n\n[1]- Ir para o fundo do estabelecimento")
+			leia(dialogo_escolha)
+
+			escolha(dialogo_escolha)
+			{
+
+				caso 1:
+				escreva("\n\nVocê encontrou um galão de gasolina\n")
+				
+			}
+		}
      funcao game_over() // SERVE PARA DAR O GAME OVER :)
      {
      	se(en <= 0){
      		escreva("\n\nVOCÊ FICOU SEM ENERGIA E FOI PEGO PELA POLICIA E FOI LEVADO PARA OS POÇOS\n\n")
      		escreva("- - - GAME OVER - - -")
 
-     		Ut.aguarde(10000000)
+     		Ut.aguarde(2147483647)
      		
      		
 
@@ -512,7 +502,7 @@ programa
 		se(dec_errada == 1){
 			escreva("\n\nVOCÊ FEZ ALGO INCRIVELMENTE ESTÚPIDO E FOI MORTO PELA POLÍCIA\n\n")
 			escreva("- - - GAME OVER - - -")
-     		Ut.aguarde(10000000)
+     		Ut.aguarde(2147483647)
 		}
      }
 
@@ -523,4 +513,5 @@ programa
      }
 	
 	
+     
 }
