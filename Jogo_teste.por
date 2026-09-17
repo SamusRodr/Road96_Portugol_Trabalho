@@ -134,7 +134,7 @@ programa
           {
           	caso 1:
           	escreva("\n\nHomem desconhecido: A mulher quem eu deveria encontrar, mas ela é um policial e eu não fui, estraguei tudo, então eu fiquei bêbado.\n\n")Ut.aguarde(3000)
-          	escreva("1- E dai que ela é policial??\n\n")
+          	escreva("[1]- E dai que ela é policial??\n\n")
           	leia(dialogo_escolha)Ut.aguarde(1000)
 
           	escolha(dialogo_escolha){
@@ -449,9 +449,9 @@ programa
 		escolha(dialogo_escolha)
 		{
 			caso 1:
-			escreva("Você entra na loja e vê os seguintes produtos:")
-			escreva("      LANCHONETE DO CAMPUS      \n")
-		     escreva("[1]- Caixa de fósforos         ==     $ 2.00\n")
+			escreva("Você entra na loja e vê algo que pode ser útil\n")Ut.aguarde(500)
+			escreva("      Loja do posto     \n")
+		     escreva("[1]- Caixa de fósforos         ==     $ 2.00\n")Ut.aguarde(1000)
 		    
 		     leia(dialogo_escolha)
 
@@ -476,17 +476,89 @@ programa
 		
 			}
 
-			escreva("* * * VOCÊ SAIU DA LOJA * * *")
-			escreva("\n\n[1]- Ir para o fundo do estabelecimento")
+			escreva("* * * VOCÊ SAIU DA LOJA * * *") Ut.aguarde(2000)
+			escreva("\n\n[1]- Ir para o fundo do estabelecimento")Ut.aguarde(2000)
 			leia(dialogo_escolha)
 
 			escolha(dialogo_escolha)
 			{
 
 				caso 1:
-				escreva("\n\nVocê encontrou um galão de gasolina\n")
+				escreva("\n\nVocê viu um monte de entulho, você deseja revirar o lixo?\n\n")Ut.aguarde(1500)
+				escreva("[1]- Sim")Ut.aguarde(500)
+				leia(dialogo_escolha)
+
+				escolha(dialogo_escolha)
+				{
+					caso 1:
+					escreva("\n\nVocê encontrou uma mangueira e um galão de gasolina vazio\n\n")Ut.aguarde(2000)
+					pare
+				}
+				pare
 				
 			}
+
+
+			escreva("O que você deseja fazer agora?\n")Ut.aguarde(1500)
+			escreva("[1]- Ir em direcão do poste de luz\n")Ut.aguarde(500)
+			escreva("[2]- Ir para a van da polícia\n\n")Ut.aguarde(2000)
+			leia(dialogo_escolha)
+
+			escolha(dialogo_escolha)
+			{
+				caso 1:
+				escreva("\n\nVocê chegou no poste de luz o que você deseja fazer?\n")Ut.aguarde(1500)
+				escreva("[1]- Tentar arrombar a caixa de luz\n\n")Ut.aguarde(2000)
+				leia(dialogo_escolha)
+
+				escolha(dialogo_escolha)
+				{
+					caso 1:
+					escreva("\n\nVocê tenta arrombar mas você é muito fraco (kkkkk newba)\n")
+					escreva("Então você resolve voltar para a van da polícia\n\n")
+				}
+				pare
+
+				caso 2:
+				escreva("Então você foi em direção da van\n")
+			}
+
+			escreva("Quando você chegou na van você notou que a portinhola de gasolina do carro estava aberta\n")Ut.aguarde(1500)
+			escreva("[1]- Usar a mangueira para retirar a gasolina da van e colocar no galão vazio\n\n")Ut.aguarde(2000)
+			leia(dialogo_escolha)
+
+			escolha(dialogo_escolha)
+			{
+				caso 1:
+				escreva("\n\nVocê conseguiu um galão de gasolina cheio")
+			}
+			escreva("Você decide voltar para os fundos do posto\n")
+			escreva("O que você deseja fazer?")
+			escreva("[1]- Usar a gasolina para lavar o seu corpo e acender um fósforo para ajudar a secar o corpo mais rápido\n")Ut.aguarde(500)
+			escreva("[2]- Usar a gasolina e os fósforos para queimar os entulhos de lixo e fazer um incêndio\n\n")Ut.aguarde(2000)
+			leia(dialogo_escolha)
+
+			escolha(dialogo_escolha)
+			{
+				caso 1:
+				escreva("\n\nPOR > ALGUM < MOTIVO VOCÊ REALMENTE PENSOU QUE ISSO SERIA UMA > ÓTIMA < IDEIA E SE QUEIMOU ATÉ A MORTE")Ut.aguarde(2000)
+				game_over()
+				pare
+
+				caso 2:
+				escreva("\n\nOs policiais foram atraídos para o incêndio gerando uma distração perfeita")Ut.aguarde(2000)
+				pare
+			}
+
+			escreva("Agora que os policiais foram ver o incêndio a chave da van estava largada em cima da mesa\n")Ut.aguarde(2000)
+			escreva("Com as chaves em mãos você volta para a van\n")Ut.aguarde(2000)
+			escreva("[1]- Ei eu consegui as chaves da van, eu vou ver se as chaves das suas algemas estão lá dentro\n\n")Ut.aguarde(2000)
+			leia(dialogo_escolha)
+			escreva("\n\nZoe: foi mais rápido que eu imaginava, toma cuidado para os policiais não te verem\n")Ut.aguarde(2000)
+			escreva("Você conseguiu abrir a van e achou as chaves das algemas da Zoe lá dentro\n")Ut.aguarde(2000)
+			escreva("[1]- Libertar as algemas da Zoe")
+			escreva("Zoe: Obrigada, vamos fugir antes que eles nos veja-")
+			escreva()
 		}
      funcao game_over() // SERVE PARA DAR O GAME OVER :)
      {
@@ -500,7 +572,7 @@ programa
 
 		}
 		se(dec_errada == 1){
-			escreva("\n\nVOCÊ FEZ ALGO INCRIVELMENTE ESTÚPIDO E FOI MORTO PELA POLÍCIA\n\n")
+			escreva("\n\nVOCÊ FEZ ALGO INCRIVELMENTE ESTÚPIDO E MORREU POR BURRICE OU FOI MORTO PELA POLÍCIA\n\n")
 			escreva("- - - GAME OVER - - -")
      		Ut.aguarde(2147483647)
 		}
