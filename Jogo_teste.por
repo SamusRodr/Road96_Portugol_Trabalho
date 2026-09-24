@@ -84,14 +84,14 @@ programa
 		ent_continuar()
 
           din = sorteia(5, 20)
-		en = sorteia(3, 7)
+		en = sorteia(4, 8)
           
 		escreva("\n\n° 11 de junho de 1996 °\n\n")Ut.aguarde(2000)
 		escreva("* 1498 KM para a fronteira *\n\n")Ut.aguarde(2000)
 
-		dia = (sorteia(1, 3)) + dia
+		dia = (sorteia(1, 2)) + dia
 
-          FIRE_STARTER()
+          
 		
 
           
@@ -105,7 +105,7 @@ programa
 	}
 	funcao ABOUT_A_GIRL() // CAPÍTULO DO JOHN == FINALIZADO
      {
-     	escreva("° ", dia, " de junho de 1996 °\n\n")Ut.aguarde(2000)
+     	escreva("\n\n° ", dia, " de junho de 1996 °\n\n")Ut.aguarde(2000)
 		escreva("~~ ABOUT A GIRL ~~\n\n")Ut.aguarde(2500)
 
 		
@@ -333,9 +333,9 @@ programa
      	
      }
 
-     funcao FIRE_STARTER() // CAPÍTULO DA ZOE
+     funcao FIRE_STARTER() // CAPÍTULO DA ZOE == FINALIZADO
      {
-     	escreva("° ", dia, " de junho de 1996 °\n\n")Ut.aguarde(2000)
+     	escreva("\n\n	° ", dia, " de junho de 1996 °\n\n")Ut.aguarde(2000)
      	escreva("~~ FIRE STARTER ~~\n\n")Ut.aguarde(2500)
 
 
@@ -448,15 +448,15 @@ programa
 			escreva("\n\nTem uma loja, pode ter algo útil você quer entrar?\n\n")
 		}
 
-		escreva("(1)- Entrar na loja\n")Ut.aguarde(1000)		
+		escreva("(1)- Entrar na loja\n\n")Ut.aguarde(1000)		
 		leia(dialogo_escolha)
 
 		escolha(dialogo_escolha)
 		{
 			caso 1:
-			escreva("Você entra na loja e vê algo que pode ser útil\n")Ut.aguarde(500)
+			escreva("\nVocê entra na loja e vê algo que pode ser útil\n")Ut.aguarde(500)
 			escreva("|||      Loja do posto     |||\n")
-		     escreva("(1)- Caixa de fósforos         ==     $ 2.00\n")Ut.aguarde(1000)
+		     escreva("\n(1)- Caixa de fósforos         ==     $ 2.00\n\n")Ut.aguarde(1000)
 		    
 		     leia(dialogo_escolha)
 
@@ -464,7 +464,7 @@ programa
 
 		     	caso 1:
 		     	se(din < 2){
-		     		escreva("* * * SALDO INSUFICIENTE, POBRE * * *\n")
+		     		escreva("\n\n* * * SALDO INSUFICIENTE, POBRE * * *\n")
 		     		escreva("(1)- Tentar pegar os fósforos a força\n\n")
 		     		leia(dialogo_escolha)
 
@@ -489,7 +489,7 @@ programa
 			}
 
 			escreva("\n* * * VOCÊ SAIU DA LOJA * * *") Ut.aguarde(2000)
-			escreva("\n\n(1)- Ir para o fundo do estabelecimento")Ut.aguarde(2000)
+			escreva("\n\n(1)- Ir para os fundos do estabelecimento\n\n")Ut.aguarde(2000)
 			leia(dialogo_escolha)
 
 			escolha(dialogo_escolha)
@@ -497,7 +497,7 @@ programa
 
 				caso 1:
 				escreva("\n\nVocê viu um monte de entulho, você deseja revirar o lixo?\n\n")Ut.aguarde(1500)
-				escreva("(1)- Sim")Ut.aguarde(500)
+				escreva("(1)- Sim\n\n")Ut.aguarde(500)
 				leia(dialogo_escolha)
 
 				escolha(dialogo_escolha)
@@ -511,7 +511,7 @@ programa
 			}
 
 
-			escreva("O que você deseja fazer agora?\n")Ut.aguarde(1500)
+			escreva("O que você deseja fazer agora?\n\n")Ut.aguarde(1500)
 			escreva("(1)- Ir em direcão do poste de luz\n")Ut.aguarde(500)
 			escreva("(2)- Ir para a van da polícia\n\n")Ut.aguarde(2000)
 			leia(dialogo_escolha)
@@ -519,33 +519,33 @@ programa
 			escolha(dialogo_escolha)
 			{
 				caso 1:
-				escreva("\n\nVocê chegou no poste de luz o que você deseja fazer?\n")Ut.aguarde(1500)
+				escreva("\n\nVocê chegou no poste de luz o que você deseja fazer?\n\n")Ut.aguarde(1500)
 				escreva("[1]- Tentar arrombar a caixa de luz\n\n")Ut.aguarde(2000)
 				leia(dialogo_escolha)
 
 				escolha(dialogo_escolha)
 				{
 					caso 1:
-					escreva("\n\nVocê tenta arrombar mas você é muito fraco (kkkkk newba)\n")
-					escreva("Então você resolve voltar para a van da polícia\n\n")
+					escreva("\n\nVocê tenta arrombar mas você é muito fraco (kkkkk newba)\n")Ut.aguarde(500)
+					escreva("Então você resolve voltar para a van da polícia\n\n")Ut.aguarde(2000)
 				}
 				pare
 
 				caso 2:
-				escreva("Então você foi em direção da van\n")
+				escreva("Então você foi em direção da van\n")Ut.aguarde(1500)
 			}
 
-			escreva("Quando você chegou na van você notou que a portinhola de gasolina do carro estava aberta\n")Ut.aguarde(1500)
+			escreva("Quando você chegou na van você notou que a portinhola de gasolina do carro estava aberta\n\n")Ut.aguarde(1500)
 			escreva("(1)- Usar a mangueira para retirar a gasolina da van e colocar no galão vazio\n\n")Ut.aguarde(2000)
 			leia(dialogo_escolha)
 
 			escolha(dialogo_escolha)
 			{
 				caso 1:
-				escreva("\n\nVocê conseguiu um galão de gasolina cheio")
+				escreva("\n\nVocê conseguiu um galão de gasolina cheio\n\n")Ut.aguarde(2000)
 			}
-			escreva("Você decide voltar para os fundos do posto\n")
-			escreva("O que você deseja fazer?")
+			escreva("Você decide voltar para os fundos do posto\n")Ut.aguarde(2000)
+			escreva("O que você deseja fazer?\n\n")Ut.aguarde(2000)
 			escreva("(1)- Usar a gasolina para lavar o seu corpo e acender um fósforo para ajudar a secar o corpo mais rápido\n")Ut.aguarde(500)
 			escreva("(2)- Usar a gasolina e os fósforos para queimar os entulhos de lixo e fazer um incêndio\n\n")Ut.aguarde(2000)
 			leia(dialogo_escolha)
@@ -553,26 +553,27 @@ programa
 			escolha(dialogo_escolha)
 			{
 				caso 1:
-				escreva("\n\nPOR >>> ALGUM <<< MOTIVO VOCÊ REALMENTE PENSOU QUE ISSO SERIA UMA >>> ÓTIMA <<< IDEIA E SE QUEIMOU ATÉ A MORTE")Ut.aguarde(2000)
+				escreva("\n\nPOR >>> ALGUM <<< MOTIVO VOCÊ REAL PENSOU QUE ISSO SERIA UMA >>> ÓTIMA <<< IDEIA E SE QUEIMOU ATÉ A MORTE\n\n")Ut.aguarde(2000)
 				dec_errada = 1
 				
 				game_over()
 				pare
 
 				caso 2:
-				escreva("\n\nOs policiais foram atraídos para o incêndio gerando uma distração perfeita")Ut.aguarde(2000)
+				escreva("\n\nOs policiais foram atraídos para o incêndio gerando uma distração perfeita\n\n")Ut.aguarde(2000)
 				pare
 			}
 
-			escreva("Agora que os policiais foram ver o incêndio a chave da van estava largada em cima da mesa\n")Ut.aguarde(2000)
-			escreva("Com as chaves em mãos você volta para a van\n")Ut.aguarde(2000)
+			escreva("Agora que os policiais foram ver o incêndio a chave da van estava largada em cima da mesa\n\n")Ut.aguarde(2000)
+			escreva("Com as chaves em mãos você volta para a van\n\n")Ut.aguarde(2000)
 			escreva("[1]- Ei eu consegui as chaves da van, eu vou ver se as chaves das suas algemas estão lá dentro\n\n")Ut.aguarde(2000)
 			leia(dialogo_escolha)
 			escreva("\n\nZoe: foi mais rápido que eu imaginava, toma cuidado para os policiais não te verem\n")Ut.aguarde(2000)
 			escreva("Você conseguiu abrir a van e achou as chaves das algemas da Zoe lá dentro\n")Ut.aguarde(2000)
-			escreva("[1]- Libertar as algemas da Zoe")
-			escreva("Zoe: Obrigada, vamos fugir antes que eles nos veja-\n")
-			escreva("???: Ei! onde vocês pensam que estão indo?\n")
+			escreva("[1]- Libertar as algemas da Zoe\n\n")Ut.aguarde(2000)
+			leia(dialogo_escolha)
+			escreva("\n\nZoe: Obrigada, vamos fugir antes que eles nos veja-\n\n")Ut.aguarde(2000)
+			escreva("???: Ei! onde vocês pensam que estão indo?\n")Ut.aguarde(2000)
 
 
 		    escreva("╭─────────────────────────────────────────────────────────────────────────────────────────────────────────╮\n" )
@@ -611,7 +612,7 @@ programa
 		    escreva("[1]- Para onde estamos indo agora???\n\n")Ut.aguarde(2000)
 		    leia(dialogo_escolha)
 
-		    escreva("Zoe: Meu pai deve ter descoberto onde eu estou, eu acho que vou ser mandada pra casa\n\n")Ut.aguarde(2000)
+		    escreva("\nZoe: Meu pai deve ter descoberto onde eu estou, eu acho que vou ser mandada pra casa\n\n")Ut.aguarde(2000)
 		    escreva("[1]- E eu?\n\n")Ut.aguarde(2000)
 		    leia(dialogo_escolha)
 		    
@@ -620,26 +621,29 @@ programa
 		    escreva("[1]- POÇOS?\n\n")Ut.aguarde(2000)
 		    leia(dialogo_escolha)
 
-		    escreva("Zoe: Lá é onde os adolecentes que estão tentando fugir são mandados quando são capurados, dizem que tem gente que sofre tanto lá que eles ficam totalmente quebrados\n\n")Ut.aguarde(2000)
+		    escreva("\nZoe: Lá é onde os adolecentes que estão tentando fugir são mandados quando são capurados, dizem que tem gente que sofre tanto lá que eles ficam totalmente quebrados\n\n")Ut.aguarde(2000)
 		    escreva("[1]- !!!\n")Ut.aguarde(500)
 		    escreva("[2]- Eu vou morrer???\n\n")Ut.aguarde(2000)
 		    leia(dialogo_escolha)
 
-		    escreva("Zoe: Ma- mas não precisa se preocupar!!!\n")Ut.aguarde(2000)
+		    escreva("Zoe: Ma-mas não precisa se preocupar!!!\n")Ut.aguarde(2000)
 		    escreva("Zoe: Eu vou falar com o meu pai para te tirar de lá!!!\n")Ut.aguarde(2000)
 		    escreva("Vocês começam a ouvir barulhos de carros e tiros do lado de fora\n\n")Ut.aguarde(2000)
 		    escreva("[1]- Ei o que está acontecendo lá fora????\n\n")Ut.aguarde(2000)
 		    leia(dialogo_escolha)
 
-		    escreva("Zoe: Eu também não sei!!! começou do nada\n")Ut.aguarde(2000)
-		    escreva("Vocês começam a ouvir pessoas falando do lado de fora\n")Ut.aguarde(2000)
-		    escreva("Policial: Ei- ei fiquem parados não se aproximem mais!!!\n")Ut.aguarde(2000)
-		    escreva("Vocês ouvem outro barulho de tiro, provavelmente atiraram no policial\n")Ut.aguarde(2000)
-		    escreva("Algúem abre a porta da van\n")Ut.aguarde(2000)
+		    escreva("Zoe: Eu também não sei!!! Começou do nada\n\n")Ut.aguarde(2000)
+		    escreva("Vocês começam a ouvir pessoas falando do lado de fora\n\n")Ut.aguarde(2000)
+		    escreva("Policial: Ei- ei fiquem parados não se aproximem mais!!!\n\n")Ut.aguarde(2000)
+		    escreva("Vocês ouvem outro barulho de tiro, provavelmente atiraram no policial\n\n")Ut.aguarde(2000)
+		    escreva("Algúem abre a porta da van\n\n")Ut.aguarde(2000)
 		    escreva("???: Ei você é a Zoe né?\n")Ut.aguarde(2000)
-		    escreva("???: Nós somos da BRIGADA DESTRUIDORA nós viemos aqui para te salvar\n")Ut.aguarde(2000)
-		    escreva("Zoe: BRIGADA DESTRUIDORA???\n")Ut.aguarde(2000)
+		    escreva("???: Nós somos da BRIGADA DESTRUIDORA nós viemos aqui para te salvar\n\n")Ut.aguarde(2000)
+		    escreva("Zoe: BRIGADA DESTRUIDORA???\n\n")Ut.aguarde(2000)
 		    escreva("???: Depois eu explico isso\n")Ut.aguarde(2000)
+		    escreva("???: Nós precisamos que você venha com a gente\n\n")Ut.aguarde(2000)
+		    escreva("Zoe: ...\n")
+		    escreva("Zoe: Entendi então eu vou com vocês\n")
 		    escreva("Zoe: Então eu acho que eu vou indo agora\n")Ut.aguarde(2000)
 		    escreva("Zoe: Espero que nós nos encontremos outra hora, obrigada pela ajuda e até mais\n\n")Ut.aguarde(2000)
 		    escreva("[1]- Tchau\n")Ut.aguarde(500)
@@ -654,6 +658,7 @@ programa
 		    
 		
 		}
+     
      funcao game_over() // SERVE PARA DAR O GAME OVER :)
      {
      	se(en <= 0){
@@ -677,7 +682,95 @@ programa
      	escreva("\n\nPressione [ENTER] para continuar")
 		leia(continuar)
      }
-	
+
+	funcao CRUISIN() // CAPÍTULO DA SONYA == EM ANDAMENTO...
+	{
+		
+     	escreva("\n\n° ", dia, " de junho de 1996 °\n\n")Ut.aguarde(2000)
+		escreva("~~ CRUISIN ~~\n\n")Ut.aguarde(2500)
+
+		
+
+		escreva("*  Energia = ", en, "  *\n")Ut.aguarde(500)
+		escreva("*  Dinheiro = $ ", din, "  *\n")Ut.aguarde(2000)
+
+		escreva("╭────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮\n")
+		escreva("│                                                                                                                    │\n" )
+		escreva("│                                            *** HISTÓRIA ***                                                        │\n" )Ut.aguarde(500)
+		escreva("│                                                                                                                    │\n" )Ut.aguarde(1000)
+		escreva("│  Depois de um tempo tentando conseguir uma carona você tirou um jackpot                                            │\n")Ut.aguarde(3000)
+		escreva("│  Você entra em uma limusino muito chique de uma pessoa que parece muito famosa                                     │\n")Ut.aguarde(3000)
+		escreva("│  Mas parece uma pessoa muito chata também mas isso você releva...                                                  │\n")Ut.aguarde(3000)
+		escreva("│                                                                                                                    │\n" )
+		escreva("╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯\n")
+
+		ent_continuar()
+
+		escreva("\n Enquanto você está dentro da limusine você vê uma reportagem da SONYA uma grande jornalista e apoiadora do TYRAK\n")Ut.aguarde(3000)
+		escreva("E por ironia do destino sentada do outro lado da limusine é justamente a SONYA que está te dando carona (kkkkk roteirinho fraco)\n\n")Ut.aguarde(3000)
+
+		escreva("\n\n---------- VOCÊ CONHECEU SONYA ----------\n\n")Ut.aguarde(2000)
+
+		escreva("Sonya: Yokoso, watashi no limusine e\n\n")Ut.aguarde(3000) // não podia perder a chance de botar referencia a bleach
+
+		escreva("Tem um vinho no seu lado ele pode te dar um pouco de energia você quer beber?\n")Ut.aguarde(3000)
+		escreva("(1)- Sim\n")Ut.aguarde(3000)
+		escreva("(2)- Sim\n\n")Ut.aguarde(3000)
+		leia(dialogo_escolha)
+
+		en = en + 2
+		
+		escreva("\n\n*  Energia = ", en, "  *\n\n")Ut.aguarde(3000)
+		
+		escreva("[1]- Obrigado pela carona\n")Ut.aguarde(500)
+		escreva("[2]- Nunca estive em uma limusine\n")Ut.aguarde(500)
+		escreva("[3]- Você tá meio... longe\n\n")Ut.aguarde(3000)
+		leia(dialogo_escolha)
+
+		escolha(dialogo_escolha)
+		{
+			caso 1:
+			escreva("\n\nSonya: Não precisa me agradecer\n")
+			pare
+
+			caso 2:
+			escreva("\n\nSonya: Poucas pessoas já andaram em uma\n")
+			escreva("Sonya: Entaõ pode se sentir especial\n")
+			pare
+
+			caso 3:
+			escreva("Sonya: É para mostrar a grandiosidade da minha limusine\n")
+			pare
+			
+		}
+		 escreva("\n\nSonya: Você está se perguntando por que eu estou te dando carona\n\n")
+	      escreva("[1]- Estou\n")
+		 escreva("[2]- Estou??\n\n")
+		 leia(dialogo_escolha)
+		 escreva("\n\nSonya: Estou te dando carona... porque sei do seu segredo\n\n")
+		 escreva("[1]- Qual é o meu segredo?\n")
+		 escreva("[2]- Eu não acho que eu tenho-\n\n")
+		 leia(dialogo_escolha)
+
+		 escreva("Sonya: Que você é meu maior fã... Não diga que não é, docinho\n\n")
+		 escreva("[1]- É... eu sou sim\n")
+		 escreva("[2]- Who is this????\n\n")
+		 leia(dialogo_escolha)
+
+		 escolha(dialogo_escolha)
+		 {
+
+		 	caso 1:
+		 	escreva("\n\nSonya: É claro que é!!! Eu soube só de olhar para você\n")
+		 	pare
+
+		 	caso 2:
+		 	escreva("\n\nSonya: Hahahaha, meu fã N°1 é realmente engraçado\n")
+		 	pare
+		 }
+
+		 escreva("Sonya: Agora, relaxe. Você deve estar exausto de andar na estrada")
+	}
 	
      
 }
