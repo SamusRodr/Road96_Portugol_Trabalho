@@ -3,7 +3,7 @@ programa
 	inclua biblioteca Util --> Ut
 	inclua biblioteca Texto --> t
 	
-	inteiro vel_escrita = 55
+	inteiro vel_escrita = 0
 	inteiro dialogo_escolha // serve para determinar a escolha do player :)
 	inteiro din  // din = abreviacao para dinheiro :)
 	inteiro en  // en = abreviacao para energia :)
@@ -100,25 +100,43 @@ programa
 
 		dia = (sorteia(1, 2)) + dia
 
-		escrevaLento("\n\n | | | ESCOLHA SEU CAPÍTULO INICIAL | | | \n\n")
-		escrevaLento("(1)- ABOUT A GIRL\n\n")
-		escrevaLento("(2)- FIRE STARTER\n\n")
-		escrevaLento("(3)- CRUISIN\n\n")
+		escrevaLento("[1]-Iniciar com a ordem\n")
+		escrevaLento("[2]- Escolher o seu capítulo inicial\n\n")
 		leia(dialogo_escolha)
 
-		escolha(dialogo_escolha){
-
-			caso 1:
+		escolha(dialogo_escolha)
+		{
+			
+		caso 1:
 			ABOUT_A_GIRL()
 			pare
+			
+          caso 2:
+			escrevaLento("\n\n | | | ESCOLHA SEU CAPÍTULO INICIAL | | | \n\n") // O capítulo inicial vai ser o ABOUT A GIRL mas enquanto o jogo não está completo vou deixar assim
+			escrevaLento("(1)- ABOUT A GIRL\n\n")
+			escrevaLento("(2)- FIRE STARTER\n\n")
+			escrevaLento("(3)- CRUISIN\n\n")
+			escrevaLento("(4)- PRAYING FOR TIME")
+			leia(dialogo_escolha)
 
-			caso 2:
-			FIRE_STARTER()
-			pare
+			escolha(dialogo_escolha){
 
-			caso 3:
-			CRUISIN()
-			pare
+				caso 1:
+					ABOUT_A_GIRL()
+					pare
+
+				caso 2:
+					FIRE_STARTER()
+					pare
+
+				caso 3:
+					CRUISIN()
+					pare
+				caso 4:
+					PRAYING_FOR_TIME()
+					pare	
+			}
+
 		}
 	}
 
@@ -703,7 +721,7 @@ programa
 		}
      }			
 	
-	funcao CRUISIN() // CAPÍTULO DA SONYA == EM ANDAMENTO... :(
+	funcao CRUISIN() // CAPÍTULO DA SONYA == FINALIZADO :)
 	
 	{
 		escrevaLento("\n\n\t° ")
@@ -742,11 +760,19 @@ programa
 		escrevaLento("(2)- Sim\n\n")
 		leia(dialogo_escolha)
 
-		en = en + 2
+		ganho = sorteia(0, 1)
+
+		escrevaLento("\n\nVocê ganhou ")
+		escreva(ganho)
+		escrevaLento(" BARRAS DE ENERGIA")
+
+		en = ganho + en
 		
 		escrevaLento("\n\n\t*  Energia = ")
 		escreva(en)
 		escrevaLento("  *\n\n")
+
+		ganho = 0
 		
 		escrevaLento("[1]- Obrigado pela carona\n")
 		escrevaLento("[2]- Nunca estive em uma limusine\n")
@@ -1065,4 +1091,199 @@ programa
 		}
 	}
 
+     funcao PRAYING_FOR_TIME() // CAPÍTULO DO JAROD == EM ANDAMENTO... :(
+     {
+		
+		escrevaLento("\n\n\t° ")
+		escreva(dia)
+		escrevaLento(" de junho de 1996 °\n\n")
+		escrevaLento("\t~~ PRAYING FOR TIME ~~\n\n")
+
+		escrevaLento("\t*  Energia = ")
+		escreva(en)
+		escrevaLento("  *\n")
+		escrevaLento("\t*  Dinheiro = $ ")
+		escreva(din)
+		escrevaLento("  *\n")
+		
+		
+		escreva("╭────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮\n")
+		escreva("│                                                                                                                    │\n")
+		escreva("│                                             *** HISTÓRIA ***                                                       │\n")
+		escreva("│                                                                                                                    │\n")
+		escreva("│  Depois de um tempo caminhando na estrada, você acabou encontrando um carro boiando na rua                         │\n")
+		escreva("│  E já que não tinha ninguém por perto, não era de ninguém... rs                                                    │\n")		
+		escreva("│  E o resto você já sabe...                                                                                         │\n")
+		escreva("│                                                                                                                    │\n")
+		escreva("╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯\n")
+
+		ent_continuar()
+
+
+		escrevaLento("\n\n Você está no meio da estrada com um carro que você... pegou emprestado\n\n")
+		escrevaLento("(1)- Olhar ao redor\n")
+		escrevaLento("(2)- Se jogar do carro\n\n")
+		leia(dialogo_escolha)
+
+		escolha(dialogo_escolha)
+		{
+			caso 1:
+				escrevaLento("\n\nVocê comeu uma barrinha de cereal\n\n")
+				
+				ganho = sorteia(0, 1)
+
+				escrevaLento("\n\nVocê ganhou ")
+				escreva(ganho)
+				escrevaLento(" BARRAS DE ENERGIA")
+
+				en = ganho + en
+		
+				escrevaLento("\n\n\t*  Energia = ")
+				escreva(en)
+				escrevaLento("  *\n\n")
+				ganho = 0
+				pare
+
+			caso 2:
+				escrevaLento("\n\nVocê é meio bizzaro em, só coloquei essa opção para ter mais formas idiotas de morrer mas eu não imaginei que alguem >>> TRUE <<< iria escolher, loucura\n\n")
+				game_over()
+				pare	
+				
+		}
+
+		escrevaLento("(1)- Colocar nas notícias\n\n")
+		leia(dialogo_escolha)
+
+		escrevaLento("Rádio: E só para lembrar, NUNCA, EM HIPÓTESE NENHUMA, pare para dar carona a alguém,\n")
+		escrevaLento("Rádio: seja jovem ou idoso\n")
+		escrevaLento("Rádio: Pode ser perigoso\n")
+		escrevaLento("Rádio: E não, isso DEFINITIVAMENTE não é igual aquelas cenas em que alguém diz um conselho,\n")
+		escrevaLento("Rádio: e logo depois isso acontece com o protagonista, por um roteiro fraco\n")
+		escrevaLento("Rádio: E o Programa da Sonya de hoje fica por aqui. Obrigado pela participação!!\n\n")
+		escrevaLento("(1)- Continuar dirigindo\n\n")
+		leia(dialogo_escolha)
+
+		escrevaLento("Mais tarde...\n\n")
+		escrevaLento("Enquanto você está dirigindo, começa a chover na estrada\n")
+		escrevaLento("Então no meio da rua aparece um cara no meio da chuva...\n\n")
+		escrevaLento("[1]- Eu posso ligar o aquecedor\n")
+		escrevaLento("[2]- Você deveria tomar cuidado\n\n")
+		leia(dialogo_escolha)
+		escrevaLento("Homem estranho: ...\n\n")
+		escrevaLento("[1]- Ahn, é, então...\n\n")
+		leia(dialogo_escolha)
+		escrevaLento("Homem estranho: ...\n\n")
+		escrevaLento("[1]- Então... qual é o seu nome?\n\n")
+		escrevaLento("Homem estranho: ...\n")
+		escrevaLento("Homem estranho: Jarod\n\n")
+		escrevaLento("\n\n\t---------- VOCÊ CONHECEU JAROD ----------\n\n")
+		escrevaLento("[1]- Onde eu posso te deixar\n")
+		escrevaLento("[2]- Eu normalmente não dou carona\n")
+		escrevaLento("[3]- Não é de falar muito, né?\n\n")
+		leia(dialogo_escolha)
+
+		escrevaLento("\n\nJarod: Todos os meus cigarros estão molhados")
+		escrevaLento("[1]- Ah... sinto muito\n")
+		escrevaLento("[2]- Fumar não é um bom hábito\n\n")
+		leia(dialogo_escolha)
+
+		escrevaLento("Jarod: Mmm\n\n")
+		escrevaLento("[1]- O gato comeu a sua língua?\n")
+		escrevaLento("[2]- É falta de educação não conversar\n\n")
+		leia(dialogo_escolha)
+
+		escrevaLento("Jarod: Dois homens estão atrás de mim (ixi olha a história desse cara kkkk ta louco )")
+		escrevaLento("Jarod: Eles têm me seguindo pra cima e pra baixo nessas estradas...\n")
+		escrevaLento("Jarod: Pra cima e pra baixo\n")
+		escrevaLento("Jarod: Estou começando a pensar que nunca vão desistir\n\n")
+		escrevaLento("[1]- Eu... Eu não sei nem o que dizer\n")
+		escrevaLento("[2]- Por que eles estão fazendo isso\n\n")
+		leia(dialogo_escolha)
+
+		escrevaLento("Eles querem me parar. Não posso deixar isso acontecer\n\n")
+		escrevaLento("[1]- Dar um fim?\n")
+		escrevaLento("[2]- Não... claro que não\n")
+		escrevaLento("[3]- ...\n\n")
+          leia(dialogo_escolha)
+
+          escrevaLento("Jarod: Por isso estou aqui, na chuva, e não no meu táxi")
+          escrevaLento("Jarod: Eles estão por perto\n")
+          escrevaLento("Jarod: Eles estão... muito perto\n")
+          escrevaLento("[1]- Você está em perigo?\n")
+          escrevaLento("[2]- Você deve estar com muito medo\n\n")
+          leia(dialogo_escolha)
+
+          escrevaLento("\n\nJarod: Acho que são fãs dele... Cruel\n")
+          escrevaLento("Jarod: Ei... tem algo de errado com as suas portas\n\n")
+          escrevaLento("[1]- Ahn, não, não tem\n")
+          escrevaLento("[2]- Como assim???\n\n")
+          leia(dialogo_escolha)
+          escrevaLento("\n\n(1)- Destrancar portas\n\n")Ut.aguarde(1000)
+          escrevaLento("Não foi efetivo")
+          escrevaLento("\n\n(1)- Destrancar portas\n\n")Ut.aguarde(1000)
+          escrevaLento("Não foi efetivo")
+          escrevaLento("\n\n(1)- Destrancar portas\n\n")Ut.aguarde(1000)
+          escrevaLento("Não foi efetivo")
+          escrevaLento("\n\n(1)- Destrancar portas\n\n")Ut.aguarde(1000)
+          escrevaLento("Não foi efetivo")
+          escrevaLento("\n\n(1)- Destrancar portas\n\n")Ut.aguarde(1000)
+          escrevaLento("Não foi efetivo\n\n\n\n")
+
+          escrevaLento("(1)- Deixar Jarod\n")
+          escrevaLento("[2]- Por favor pare!!\n")
+          escrevaLento("[3]- Eu vou estacionar")
+          leia(dialogo_escolha)
+
+          escolha(dialogo_escolha)
+          {
+          	caso 1:
+          		pare
+
+          	caso 2:
+          		escrevaLento("Jarod: ...\n\n")
+          		escrevaLento("(1)- Deixar Jarod\n\n")
+          		leia(dialogo_escolha)
+          		pare
+          	caso 3:
+          		escrevaLento("Jarod: ...\n\n")
+          		escrevaLento("(1)- Deixar Jarod\n\n")
+          		leia(dialogo_escolha)
+          		pare	
+          }
+
+          escrevaLento("\n\nEntão você resolve estacionar o carro...\n\n")
+          escrevaLento("[1]- É hora de você sair, agora!!!\n")
+          escrevaLento("[2]- Sinto muito, mas você precisa sair\n\n")
+          leia(dialogo_escolha)
+
+          escrevaLento("\n\nJarod: Eu não vou fazer isso sabe por quê?\n\n")
+
+          escrevaLento("[1]- Eu pedi pra você sair\n")
+          escrevaLento("[2]- Saia agora, eu disse!\n")
+          escrevaLento("[3]- Não... por quê?\n\n")
+          leia(dialogo_escolha)
+
+          escrevaLento("Então você olha para a mão do Jarod...\n")
+          escrevaLento("Uma arma\n") Ut.aguarde(200)
+          escrevaLento("Apontada\n") Ut.aguarde(200)
+          escrevaLento("Na\n") Ut.aguarde(200)
+          escrevaLento("Sua\n") Ut.aguarde(200)
+          escrevaLento("Direção\n\n") Ut.aguarde(200)
+
+          escrevaLento("Jarod: Por isso.\n\n")
+          escrevaLento("[1]- Só... só vai com calma\n")
+          escrevaLento("[2]- Você não vai usar isso (calma aurudo)\n")
+          leia(dialogo_escolha)
+
+          escrevaLento("\n\n Quem poderia dizer que aquela notícia poderia prever o que iria acontecer...\n\n")
+          escrevaLento("Jarod: Você escolheu o cara errado pra dar carnoa. Sabia disso?\n")
+          escrevaLento("Jarod: Agora dirige\n\n")
+          escrevaLento("(1)- Dirigir\n\n")
+          leia(dialogo_escolha)
+
+          escrevaLento("Jarod: Eu tive um péssimo dia e precisava de algo pra me animar\n")
+          escrevaLento("Jarod: Então é isso que você vai fazer\n")
+          escrevaLento("Jarod: Me animar")
+          
+     }
 }
