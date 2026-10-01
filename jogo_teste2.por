@@ -14,6 +14,7 @@ programa
 	inteiro dia = 11 // serve para fazer o sistema de dias diferentes :)
 	inteiro dec_errada = 0 // serve para finalizar o jogo por causa de uma decisão que você errou :) 
 	cadeia continuar
+	inteiro destino // serve para definir o próximo capítulo :)
 	
 	
 	
@@ -23,17 +24,12 @@ programa
 	{		
 
           escrevaLento("\tINICIANDO O NERVEGEAR") Ut.aguarde(1500)
-          escrevaLento(" .") Ut.aguarde(1500)
-          escrevaLento(".") Ut.aguarde(1500)
-          escrevaLento(".\n\n\n\n") Ut.aguarde(2000)
+          escrevaLento(" .") Ut.aguarde(1000)
+          escrevaLento(".") Ut.aguarde(1000)
+          escrevaLento(".\n\n\n\n") Ut.aguarde(1500)
          
-
-        escreva("\t\t\t _     ___ _   _ _  __  ____ _____  _    ____ _____ \n")
-        escreva("\t\t\t| |   |_ _| \\ | | |/ / / ___|_   _|/ \\  |  _ \\_   _|\n")
-        escreva("\t\t\t| |    | ||  \\| | ' /  \\___ \\ | | / _ \\ | |_) || |  \n")
-        escreva("\t\t\t| |___ | || |\\  | . \\   ___) || |/ ___ \\|  _ < | |  \n")
-        escreva("\t\t\t|_____|___|_| \\_|_|\\_\\ |____/ |_/_/   \\_\\_| \\_\\|_|  \n\n\n\n")Ut.aguarde(2000)
-          
+          escrevaLento("\tLINK ") Ut.aguarde(1000)
+          escrevaLento(" START\n\n\n\n")   Ut.aguarde(1000)      
 
 	     escreva("      ..........:::::::::;;;;;;;;;++++++xxxxxxxxxXXXX$$$$$$&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&$$$$XXxx\n")
 		escreva("  .........:::::::;;;;;;;;;++++++xxxxxxXXXXXXX$$$$$&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&$$$X\n")
@@ -228,7 +224,7 @@ programa
 			escrevaLento("John: Toma pegue aqui uma recompensa\n\n")
 			ganho = sorteia(10, 20)
 			escrevaLento("\t$")
-			escreva(din)
+			escreva(ganho)
 			escrevaLento("\n\n")
 			
 			din = ganho + din
@@ -278,7 +274,9 @@ programa
 				pare
 
 			caso 3:
-				escrevaLento("\nJohn: Bem, é perigoso, disso tenha certeza.\n\n")
+				escrevaLento("\nJohn: Bem, é perigoso, disso tenha certeza.\n")
+				escrevaLento("John: Tenta conseguir a rota mais segura o possível\n")
+				escrevaLento("John: E tenta evitar lugares aglomerados")
 				pare
 		}
 
@@ -290,7 +288,7 @@ programa
 		escolha(dialogo_escolha)
 		{
 			caso 1:
-				escrevaLento("\nJohn: É, talvez\n\n")
+				escrevaLento("\nJohn: É... talvez\n\n")
 				pare
 
 			caso 2:
@@ -301,7 +299,8 @@ programa
 				pare
 
 			caso 3:
-				escrevaLento("\nJohn: Boa sorte para você\n\n")
+				escrevaLento("\nJohn: Boa sorte para você\n")
+				escrevaLento("John: Mas saiba que até hoje não teve um registro de alguém que conseguiu fugir desse maldito país\n\n")
 				pare
 		}
 
@@ -316,10 +315,15 @@ programa
 				pare
 		}
 
-		escrevaLento("\t~~ ABOUT A GIRL ~~\n")
-		escrevaLento("\t-- FINALIZADO --")
+		escrevaLento("\t~~ ABOUT A GIRL ~~\n\n")
+		escrevaLento("\t-- FINALIZADO --\n\n")
 
 		dia = (sorteia(1, 2)) + dia
+
+		escrevaLento("[1]- Ir andando § 3 BARRAS DE ENERGIA")
+		escrevaLento("[2]- Pegar uma carona § 2 BARRAS DE ENERGIA")
+		escrevaLento("[3]- Pegar um taxi § 2 BARRAS DE ENERGIA $ 7 ")
+		escrevaLento("[4]- Pegar um ônibus § 2 BARRAS DE ENERGIA $ 5")
 	}
 
 	funcao minigame() // SERVE PARA O SISTEMA DOS MINIGAMES :)
@@ -662,9 +666,14 @@ programa
 		leia(dialogo_escolha)
 
 		escrevaLento("\n\n\t~~ FIRE STARTER ~~\n")
-		escrevaLento("\t-- FINALIZADO --")
+		escrevaLento("\t-- FINALIZADO --\n\n")
 
 		dia = (sorteia(1, 2)) + dia
+
+		escrevaLento("[1]- Ir andando § 3 BARRAS DE ENERGIA")
+		escrevaLento("[2]- Pegar uma carona § 2 BARRAS DE ENERGIA")
+		escrevaLento("[3]- Pegar um taxi § 2 BARRAS DE ENERGIA $ 7 ")
+		escrevaLento("[4]- Pegar um ônibus § 2 BARRAS DE ENERGIA $ 5")
 	}
 
 	funcao ent_continuar() // É A FUNÇÃO DO SISTEMA DO "ENTER PARA CONTINUAR" :)
@@ -797,6 +806,252 @@ programa
 		escrevaLento("Sonya: Vai lá, pode subir\n\n")
 		escrevaLento("(1)- Olhar\n\n")
 		leia(dialogo_escolha)
+
+		escrevaLento("\n\nVocê presencia uma vista realmente muito bonita\n\n")
+		escrevaLento("[1]- Uau! que vista\n")
+		escrevaLento("[2]- Você faz isso com frequência??\n")
+		escrevaLento("[3]- Tem um bicho nos meus dentes\n\n")
+		leia(dialogo_escolha)
+
+		escolha(dialogo_escolha)
+		{
+			caso 1:
+				escrevaLento("\n\nSonya: Uhum, sim")
+				pare
+
+			caso 2:
+				escrevaLento("\nSonya: Geralmente eu faço isso pra xingar meus opositores\n")
+				escrevaLento("Sonya: É realmente satisfatório\n\n")
+				escrevaLento("[1]- ...\n\n")
+				leia(dialogo_escolha)
+			     pare
+
+			caso 3:
+				escrevaLento("\nSonya: Ficando com a boca aberta lá em cima da nisso\n")
+				escrevaLento("Sonya: Você tem que ser mais inteligente meu fã N°1")
+				pare
+		}
+
+		escrevaLento("\n\nSonya: Me faça um favor e pegue uma daquelas cartas de fãs do seu lado\n")
+		escrevaLento("Sonya: Eu não gosto de tocar nelas\n\n")
+		escrevaLento("(1)- Verificar\n\n")
+		leia(dialogo_escolha)
+
+		escreva("\n\n╭─────────────────────────────────────────────────╮\n")
+		escreva("│                                                 │\n")
+		escreva("│                 ** CARTA **                     │\n")
+		escreva("│                                                 │\n")
+		escreva("│                   Cuidado                       │\n")
+		escreva("│                    Com                          │\n")
+		escreva("│                     As                          │\n")
+		escreva("│                   Costas                        │\n")
+		escreva("│                                                 │\n")
+		escreva("╰─────────────────────────────────────────────────╯\n")
+
+		escrevaLento("\nSonya: O que diz?\n\n")
+		escrevaLento("[1]- ... Que você é a melhor")
+		escrevaLento("[2]- Para, umh, se cuidar\n\n")
+		leia(dialogo_escolha)
+
+		escolha(dialogo_escolha)
+		{
+               caso 1:
+               	escrevaLento("\n\nSonya: Hum, mais uma pode deixar ai na pilha de cartas genéricas de fãs\n\n")
+				escrevaLento("[1]- Tá... claro\n\n")
+				leia(dialogo_escolha)
+				pare
+			caso 2:
+				escrevaLento("\n\nSonya: Ah, certo, coloque ele na pilha de ameaças de morte\n\n")
+				escrevaLento("[1]- Ah... entendo\n\n")
+				leia(dialogo_escolha)
+				pare
+		}
+
+		escrevaLento("[1]- Então... você recebe ameaças de morte com frequencia??\n\n")
+		escrevaLento("Sonya: Eu imagino que vem com o pack de ser rica e famosa\n\n")
+		escrevaLento("[1]- Ninguém deveria te ameaçar\n\n")
+		escrevaLento("Sonya: Eu sei, provavelmente deve ser um daqueles perdedores da BRIGADA DESTRUIDORA\n")
+		escrevaLento("Sonya: Ou partidários liberais da FLORRES\n")
+		escrevaLento("Sonya: Mas seja lá quem for, não vai fazer nada\n\n")
+		escrevaLento("[1]- Espero que esteja certa\n")
+		escrevaLento("[2]- Como você sabe?\n\n")
+		leia(dialogo_escolha)
+		escrevaLento("\n\nSonya: Acredite em mim, eu sei\n\n")
+		escrevaLento("Motorista: Sonya\n\n")
+		escrevaLento("Sonya: O QUE É, ADAM? ESTOU TENTANDO TER UM MOMENTO COM MEU MAIOR FÃ AQUI\n\n")
+		escrevaLento("Adam: Está na hora\n\n")
+		escrevaLento("[1]- Hora do quê??\n\n")
+		leia(dialogo_escolha)
+		escrevaLento("\n\nSonya: Para o Programa da Sonya, é claro. Eu nunca perco um\n")
+		escrevaLento("Sonya: Agora fique com a bundinha bem sentadinha ali\n\n")
+		escrevaLento("[1]- Sentar a bundinha\n\n")
+		leia(dialogo_escolha)
+		escrevaLento("\n\nSonya: Falamos que é ao vivo, mas seria muito difícil\n\n")
+		escrevaLento("TV: Os ataques da BRIGADA DESTRUIDORA aumentaram recentemente\n")
+		escrevaLento("TV: Questionando sobre isso, Tyrak garantiu a seus cidadãos que reprimirá\n")
+		escrevaLento("TV: qualquer tentativa de ato de terrorismo no Dia da Eleição\n")
+		escrevaLento("TV: E agora, sobre o relatório de adolescentes desaparecidos de hoje\n")
+		escrevaLento("TV: Infelizmente, temos mais adolescentes-\n\n")
+		escrevaLento("Sonya: E blá blá blá\n")
+		escrevaLento("Sonya: Você quer me perguntar algo? Com minha rede de contatos eu sei de bastante coisas\n\n")
+		escrevaLento("[1]- Tenho uma pergunta\n\n")
+		leia(dialogo_escolha)
+		escrevaLento("\n\n[1]- Parece que algo grande vai acontecer\n")
+		escrevaLento("[2]- Sabe algo sobre o jovem que morreu??")
+		leia(dialogo_escolha)
+
+		escolha(dialogo_escolha)
+		{
+			caso 1:
+				escrevaLento("Sonya: Parece que a BRIGADA DESTRUIDORA está tramando algo\n")
+				pare
+
+			caso 2:
+				escrevaLento("Sonya: Umh...\n")
+				escrevaLento("Sonya: É somente uma mentira criada pelos apoiadores de FLORRES\n")
+				escrevaLento("Sonya: Não se precupe com isso\n")
+				pare	
+		}
+
+		escrevaLento("Sonya: E você querido? Planeja estar na fronteira no grande dia?\n\n")
+		escrevaLento("[1]- Minha voz será ouvida, sim (ROTA DA REVOLUÇÃO)\n")
+		escrevaLento("[2]- Não estava planejando, na verdade (ROTA DA FUGA)\n\n")
+		leia(dialogo_escolha)
+
+		escolha(dialogo_escolha)
+		{
+			caso 1:
+				escrevaLento("Sonya: Jesus, outro adolescente politizado\n")
+				pare
+
+			caso 2:
+				escrevaLento("Sonya: Entendo, bem sensato\n")
+				pare	
+		}
+
+		escrevaLento("Sonya: Peraí, você está sentido? Estamos reduzindo a velocidade!\n")
+		escrevaLento("Sonya: Eí Adam, por que estamos reduzindo a velocidade??\n\n")
+		escrevaLento("Adam: Estamos entrando em um posto de controle de segurança\n")
+		escrevaLento("Adam: Parece que há outro protesto\n\n")
+		escrevaLento("Sonya: Ai ai, e pensar que essa já foi uma nação boa e totalitária\n\n")
+		escrevaLento("[1]- Eles fazem muito isso??\n")
+		escrevaLento("[2]- O que eles estão protestando??\n\n")
+		leia(dialogo_escolha)
+
+		escolha(dialogo_escolha)
+		{
+			caso 1:
+				escrevaLento("Sonya: Mais e mais, com as eleições chegando\n")
+				escrevaLento("Sonya: As pessoas estão tendo... Como é mesmo a palavra??... esperança\n\n")
+				pare
+
+			caso 2:
+				escrevaLento("Sonya: A eleição de TYRAK\n")
+				escrevaLento("Sonya: Os apoiadores de FLORRES são realmente burros\n\n")
+				pare	
+		}
+
+		escrevaLento("Protestante: VOCÊ FEDE, SONYA!!!\n\n")
+		escrevaLento("Protestante: GNN SÓ TEM NOTICIA DO TYRAK\n\n")
+		escrevaLento("Você vê muitas pessoas protestando do lado de fora da limusine\n\n")
+		escrevaLento("[1]- Só tem notícias do TYRAK\n")
+		escrevaLento("[2]- Eles não gostam muito de você\n\n")
+		leia(dialogo_escolha)
+
+		escolha(dialogo_escolha)
+		{
+			caso 1:
+				escrevaLento("Eles acham que minha estação pertence e é operada pelo estado...")
+				escrevaLento("Mas não é! Quer dizer não 100 por cento!")
+				pare
+
+			caso 2:
+				escrevaLento("Sonya: Existe mais pessoas que me odeiam do que gostam de mim\n")
+				escrevaLento("Sonya: Mas eu já me acostumei, então nem me importo\n")
+				pare	
+		}
+
+		escrevaLento("Sonya: Aí vem a polícia! A FESTA TÀ PRESTES A EXPLODIR\n\n")
+		escrevaLento("Então Sonya subiu no teto da limusine\n\n")
+		escrevaLento("Sonya: SAIAM DO MEU CAMINHO! FRACASSADOS!\n\n")
+		escrevaLento("Adam: Sonya, por favor, volte a limusine\n\n")
+		escrevaLento("[1]- Você deveria escutar o Adam\n")
+		escrevaLento("[2]- Eles tem um motivo para estarem aqui(ROTA DA REVOLUÇÃO)\n\n")
+		leia(dialogo_escolha)
+
+		escolha(dialogo_escolha)
+		{
+			caso 1:
+				escrevaLento("Sonya: Ah, você ama a Sonya, não ama, docinho??\n\n")
+				pare
+
+			caso 2:
+				escrevaLento("Sonya: Uhn?, espero que você não seja igual a eles\n\n")
+				pare	
+		}
+
+		escrevaLento("[1]- Esses protestos não dão em nada (ROTA DA FUGA)\n")
+		escrevaLento("[2]- Acho que a raiva é justificada, Sonya (ROTA DA REVOLUÇÃO)\n\n")
+		leia(dialogo_escolha)
+
+		escolha(dialogo_escolha)
+		{
+			caso 1:
+				escrevaLento("Sonya: É o que eu digo no meu programa o tempo TODO\n\n")
+				pare
+
+			caso 2:
+				escrevaLento("Sonya: ?... Você ta começando a me irritar já\n\n")	
+		}
+
+		escrevaLento("Sonya: Finalmente estamos saindo\n")
+		escrevaLento("Sonya: Até mais fracassados\n")
+		escrevaLento("Sonya: O que você achou?? empolgante né??")
+		escrevaLento("[1]- Sim... muito empolgante\n")
+		escrevaLento("[2]- Tá brincando comigo né?\n\n")
+		leia(dialogo_escolha)
+
+		escolha(dialogo_escolha)
+		{
+			caso 1:
+				escrevaLento("Sonya: Você realmente me entende meu fã N°1, eu realmente gosto de você\n")
+				pare
+
+			caso 2:
+				escrevaLento("Sonya: Não... na verdade, não\n")
+				pare		
+		}
+
+		
+		escrevaLento("\t~~ CRUISIN ~~\n\n")
+		escrevaLento("\t-- FINALIZADO --\n\n")
+
+		dia = (sorteia(1, 2)) + dia
+
+		escrevaLento("Sonya: Queridinho, vou te levar para um pouco mais longe do que pretendia originalmente\n\n")
+		escrevaLento("[1]- Muito Obrigado \t§ 2 barras de energia")
+		escrevaLento("[2]- Acho que vou andando, na verdade \t § 3 barras de energia ")
+
+		escolha(dialogo_escolha)
+		{
+			caso 1:
+				destino = sorteia(1, 3)
+
+				se(destino == 1){
+
+					ABOUT_A_GIRL()
+
+					}senao se(destino == 2){
+
+						
+
+						}senao{
+
+		}
+				
+				
+		}
+
 	}
 	
 	funcao escrevaLento(cadeia texto) // É A FUNÇÃO QUE SERVE PARA FAZER A ESCRITA BONITINHA :)
