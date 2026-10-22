@@ -3,7 +3,7 @@ programa
 	inclua biblioteca Util --> Ut
 	inclua biblioteca Texto --> t
 	
-	inteiro vel_escrita = 55
+	inteiro vel_escrita = 55 // serve para determinar a velocidade da escreita :)
 	inteiro dialogo_escolha // serve para determinar a escolha do player :)
 	inteiro din  // din = abreviacao para dinheiro :)
 	inteiro en  // en = abreviacao para energia :)
@@ -16,7 +16,7 @@ programa
 	cadeia continuar
 	inteiro distancia_fronteira = 1489 // serve para definir a distancia da fronteira :)
 	inteiro carona // serve para determinar se vai ganhar carona :)
-	inteiro escolha_capitulo = 0
+	inteiro escolha_capitulo = 0 // serve para se escolher o capitulo nao continue o jogo na ordem :)
 	
 	
 	
