@@ -3,7 +3,7 @@ programa
 	inclua biblioteca Util --> Ut
 	inclua biblioteca Texto --> t
 	
-	inteiro vel_escrita = 0
+	inteiro vel_escrita = 55
 	inteiro dialogo_escolha // serve para determinar a escolha do player :)
 	inteiro din  // din = abreviacao para dinheiro :)
 	inteiro en  // en = abreviacao para energia :)
