@@ -7,8 +7,8 @@ programa
 	inteiro dialogo_escolha // serve para determinar a escolha do player :)
 	inteiro din  // din = abreviacao para dinheiro :)
 	inteiro en  // en = abreviacao para energia :)
-	inteiro ev_sorte_bot // serve para fazer os "minigames" (determina o número do bot) :)
-	inteiro ev_sorte_py // serve para fazer os "minigames" (determina o número do player) :)
+	inteiro dado_bot // serve para fazer os "minigames" (determina o número do bot) :)
+	inteiro dado_player // serve para fazer os "minigames" (determina o número do player) :)
 	inteiro vitoria = 0 // serve para determinar se você ganhou, e para dar a recompensa :)
 	inteiro ganho // serve para determinar seu ganho :)
 	inteiro dia = 11 // serve para fazer o sistema de dias diferentes :)
@@ -239,8 +239,8 @@ programa
 
 		ent_continuar()
 
-		ev_sorte_bot = sorteia(1, 3)
-		ev_sorte_py = sorteia(1, 7)
+		dado_bot = sorteia(1, 3)
+		dado_player = sorteia(1, 6)
 
 		minigame()
 
@@ -409,20 +409,20 @@ programa
 
 	funcao minigame() // SERVE PARA O SISTEMA DOS MINIGAMES :)
 	{
-		se(ev_sorte_bot == ev_sorte_py)
+		se(dado_bot == dado_player)
 		{
 			escrevaLento("\n\n\tSeu Número: ")
-			escreva(ev_sorte_py)
+			escreva(dado_player)
 			escrevaLento("\n\tNúmero do bot: ")
-			escreva(ev_sorte_bot)
+			escreva(dado_bot)
 			escrevaLento("\n\n\tVocê perdeu mais sorte na próxima :) ")
 		}
 		senao
 		{
 			escrevaLento("\n\n\tSeu Número: ")
-			escreva(ev_sorte_py)
+			escreva(dado_player)
 			escrevaLento("\n\tNúmero do bot: ")
-			escreva(ev_sorte_bot)
+			escreva(dado_bot)
 			escrevaLento("\n\n\tParabéns você ganhou!!")
 
 			vitoria = 1
@@ -1333,7 +1333,7 @@ programa
 		escrevaLento("Guarda: PARE\n\n")
 		escrevaLento("Caminhoneiro: O que foi agora?\n\n")
 		escrevaLento("Guarda: Sensor de respiração, impossível de burlar\n\n")
-		escrevaLento("Caminhoneiro: Inacreditável, nós estamos em 1996 isso nem sequer existe, jogo mentiroso do krai\n\n")
+		escrevaLento("Caminhoneiro: Inacreditável, nós estamos em 1996 isso nem sequer existe, jogo mentiroso\n\n")
 		escrevaLento("Guarda: Iniciando o sensor agora\n\n")
 
 		verificacao()
