@@ -151,8 +151,8 @@ programa
 	{
 		escrevaLento("\n\n\t° ")
 		escreva(dia)
-		escrevaLento(" de junho de 1996 °\n\n")
-		escrevaLento("\t\t~~ ABOUT A GIRL ~~\n\n\t")
+		escrevaLento(" de junho de 1996 °\n\n\n")
+		escrevaLento("\t~~ ABOUT A GIRL ~~\n\n\t")
 		escreva(distancia_fronteira)
           escrevaLento("KM para a fronteira\n\n")
 		escrevaLento("\t*  Energia = ")
@@ -445,8 +445,8 @@ programa
 	{
 		escrevaLento("\n\n\t° ")
 		escreva(dia)
-		escrevaLento(" de junho de 1996 °\n\n")
-		escrevaLento("\t\t~~ FIRE STARTER ~~\n\n\t")
+		escrevaLento(" de junho de 1996 °\n\n\n")
+		escrevaLento("\t~~ FIRE STARTER ~~\n\n\t")
           escreva(distancia_fronteira)
           escrevaLento("KM para a fronteira\n\n")
 		escrevaLento("\t*  Energia = ")
@@ -502,7 +502,7 @@ programa
 		escolha(dialogo_escolha)
 		{
 			caso 1:
-				escrevaLento("\n\nGarota ruiva: Meu pai deve ter descoberto onde eu estava.\n\n")
+				escrevaLento("\n\nGarota ruiva: Meu pai deve ter mandado eles virem atrás de mim.\n\n")
 		}
 
 		escrevaLento("[1]- Como posso te ajudar??\n")
@@ -567,7 +567,7 @@ programa
 		escolha(dialogo_escolha)
 		{
 			caso 1:
-				escrevaLento("\nVocê entra na loja e vê algo que pode ser útil\n")
+				escrevaLento("\n\nVocê entra na loja e vê algo que pode ser útil\n")
 				escrevaLento("\t|||     Loja do posto     |||\n")
 				escrevaLento("\n\t(1)- Caixa de fósforos         ==     $ 2.00\n\n")
 				leia(dialogo_escolha)
@@ -627,7 +627,7 @@ programa
 		{
 			caso 1:
 				escrevaLento("\n\nVocê chegou no poste de luz o que você deseja fazer?\n\n")
-				escrevaLento("[1]- Tentar arrombar a caixa de luz\n\n")
+				escrevaLento("(1)- Tentar arrombar a caixa de luz\n\n")
 				leia(dialogo_escolha)
 
 				escolha(dialogo_escolha)
@@ -676,8 +676,8 @@ programa
 		escrevaLento("[1]- Ei eu consegui as chaves da van, eu vou ver se as chaves das suas algemas estão lá dentro\n\n")
 		leia(dialogo_escolha)
 
-		escrevaLento("\n\nZoe: foi mais rápido que eu imaginava, toma cuidado para os policiais não te verem\n")
-		escrevaLento("Você conseguiu abrir a van e achou as chaves das algemas da Zoe lá dentro\n")
+		escrevaLento("\n\nZoe: foi mais rápido que eu imaginava, toma cuidado para os policiais não te verem\n\n")
+		escrevaLento("Você conseguiu abrir a van e achou as chaves das algemas da Zoe lá dentro\n\n")
 		escrevaLento("[1]- Libertar as algemas da Zoe\n\n")
 		leia(dialogo_escolha)
 
@@ -867,8 +867,8 @@ programa
 	{
 		escrevaLento("\n\n\t° ")
 		escreva(dia)
-		escrevaLento(" de junho de 1996 °\n\n")
-		escrevaLento("\t\t~~ CRUISIN ~~\n\n\t")
+		escrevaLento(" de junho de 1996 °\n\n\n")
+		escrevaLento("\t~~ CRUISIN ~~\n\n\t")
           escreva(distancia_fronteira)
           escrevaLento("KM para a fronteira\n\n")
 		escrevaLento("\t*  Energia = ")
@@ -1255,8 +1255,8 @@ programa
 	{
 		escrevaLento("\n\n\t° ")
 		escreva(dia)
-		escrevaLento(" de junho de 1996 °\n\n")
-		escrevaLento("\t\t~~ ROAD 96 ~~\n\n\t")
+		escrevaLento(" de junho de 1996 °\n\n\n")
+		escrevaLento("\t~~ ROAD 96 ~~\n\n\t")
 		escreva(distancia_fronteira)
           escrevaLento("KM para a fronteira\n\n")
 		escrevaLento("\t*  Energia = ")
@@ -1381,7 +1381,7 @@ programa
 	funcao verificacao() // É A FUNÇÃO QUE SERVE PARA O MINIGAME DA FRONTEIRA :)
 	{
 		inteiro oxigenio = 100 // SERVE PARA DETERMINAR QUANTO DE OXIGÊNIO O PLAYER TEM :)
-		inteiro distanciaFronteira = 3 // SERVE PARA DETERMINAR A DISTANCIA PARA A FRONTEIRA :)
+		inteiro distanciaFronteira = 10 // SERVE PARA DETERMINAR A DISTANCIA PARA A FRONTEIRA :)
 		inteiro nivelGuarda = 1 // SERVE PARA DETERMINAR O QUÃO PERTO O GUARDA ESTÁ    
 		cadeia acao // SERVE PARA DETERMINAR A AÇÃO DO PLAYER :)
 		
