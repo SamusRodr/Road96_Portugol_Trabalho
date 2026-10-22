@@ -3,7 +3,7 @@ programa
 	inclua biblioteca Util --> Ut
 	inclua biblioteca Texto --> t
 	
-	inteiro vel_escrita = 55
+	inteiro vel_escrita = 0
 	inteiro dialogo_escolha // serve para determinar a escolha do player :)
 	inteiro din  // din = abreviacao para dinheiro :)
 	inteiro en  // en = abreviacao para energia :)
@@ -16,7 +16,7 @@ programa
 	cadeia continuar
 	inteiro distancia_fronteira = 1489 // serve para definir a distancia da fronteira :)
 	inteiro carona // serve para determinar se vai ganhar carona :)
-	
+	inteiro escolha_capitulo = 0
 	
 	
 	
@@ -30,7 +30,7 @@ programa
           escrevaLento(".\n\n\n\n") Ut.aguarde(1500)
          
           escrevaLento("\tLINK ") Ut.aguarde(1000)
-          escrevaLento(" START\n\n\n\n")   Ut.aguarde(1000)      
+          escrevaLento(" START\n\n\n\n")   Ut.aguarde(1000)  // Uh referencias    
 
 	     escreva("      ..........:::::::::;;;;;;;;;++++++xxxxxxxxxXXXX$$$$$$&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&$$$$XXxx\n")
 		escreva("  .........:::::::;;;;;;;;;++++++xxxxxxXXXXXXX$$$$$&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&$$$X\n")
@@ -99,8 +99,8 @@ programa
 
 		dia = (sorteia(1, 2)) + dia
 
-		escrevaLento("[1]- Iniciar com a ordem\n")
-		escrevaLento("[2]- Escolher o seu capítulo para jogar\n\n")
+		escrevaLento("[1]- INICIAR COM A ORDEM\n")
+		escrevaLento("[2]- ESCOLHA SEU CAPÍTULO\n\n")
 		leia(dialogo_escolha)
 
 		escolha(dialogo_escolha)
@@ -113,12 +113,14 @@ programa
 			ROAD_96()
 			pare
 			
-          caso 2:
-			escrevaLento("\n\n | | | ESCOLHA SEU CAPÍTULO INICIAL | | | \n\n")
-			escrevaLento("(1)- ABOUT A GIRL\n\n")
-			escrevaLento("(2)- FIRE STARTER\n\n")
-			escrevaLento("(3)- CRUISIN\n\n")
-			escrevaLento("(4)- ROAD 96\n\n")
+          caso 2:			
+			escolha_capitulo = 1
+			escrevaLento("\n\n | | | ESCOLHA SEU CAPÍTULO | | | \n\n")			
+			escrevaLento("       (1)- ABOUT A GIRL     \n")			
+			escrevaLento("       (2)- FIRE STARTER     \n")			
+			escrevaLento("       (3)- CRUISIN          \n")			
+			escrevaLento("       (4)- ROAD 96        \n\n")          
+			
 			
 			leia(dialogo_escolha)
 
@@ -150,7 +152,7 @@ programa
 		escrevaLento("\n\n\t° ")
 		escreva(dia)
 		escrevaLento(" de junho de 1996 °\n\n")
-		escrevaLento("\t~~ ABOUT A GIRL ~~\n\n\t")
+		escrevaLento("\t\t~~ ABOUT A GIRL ~~\n\n\t")
 		escreva(distancia_fronteira)
           escrevaLento("KM para a fronteira\n\n")
 		escrevaLento("\t*  Energia = ")
@@ -158,7 +160,7 @@ programa
 		escrevaLento("  *\n")
 		escrevaLento("\t*  Dinheiro = $ ")
 		escreva(din)
-		escrevaLento("  *\n")
+		escrevaLento("  *\n")Ut.aguarde(2000)
 
 		escreva("╭────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮\n")
 		escreva("│                                                                                                                    │\n")
@@ -346,6 +348,16 @@ programa
 
 		dia = (sorteia(1, 2)) + dia
 
+		
+		se(escolha_capitulo == 1){
+				Ut.aguarde(2147483647)
+
+		}senao{
+
+		
+
+		dia = (sorteia(1, 2)) + dia
+
 		escrevaLento("(1)- Ir andando § 2 BARRAS DE ENERGIA\n")
 		escrevaLento("(2)- Pegar uma carona § 1 BARRA DE ENERGIA\n")		
 		escrevaLento("(3)- Pegar um ônibus § 1 BARRA DE ENERGIA $ 5\n\n")
@@ -400,7 +412,7 @@ programa
  				din = din - 5
  				pare			
  		}
-
+		}
  		distancia_fronteira = 981
 
  		
@@ -434,7 +446,7 @@ programa
 		escrevaLento("\n\n\t° ")
 		escreva(dia)
 		escrevaLento(" de junho de 1996 °\n\n")
-		escrevaLento("\t~~ FIRE STARTER ~~\n\n\t")
+		escrevaLento("\t\t~~ FIRE STARTER ~~\n\n\t")
           escreva(distancia_fronteira)
           escrevaLento("KM para a fronteira\n\n")
 		escrevaLento("\t*  Energia = ")
@@ -442,7 +454,7 @@ programa
 		escrevaLento("  *\n")
 		escrevaLento("\t*  Dinheiro = $ ")
 		escreva(din)
-		escrevaLento("  *\n")
+		escrevaLento("  *\n")Ut.aguarde(2000)
 
 		escreva("╭─────────────────────────────────────────────────────────────────────────────────────────────────────────╮\n")
 		escreva("│                                                                                                         │\n")
@@ -754,6 +766,13 @@ programa
 		escrevaLento("\n\n\t~~ FIRE STARTER ~~\n")
 		escrevaLento("\t-- FINALIZADO --\n\n")
 
+		se(escolha_capitulo == 1){
+				Ut.aguarde(2147483647)
+
+		}senao{
+
+		
+
 		dia = (sorteia(1, 2)) + dia
 
 		escrevaLento("(1)- Ir andando § 2 BARRAS DE ENERGIA\n")
@@ -810,6 +829,7 @@ programa
  				din = din - 5
  				pare			
  		}
+		}
 
  		distancia_fronteira = 567
 		
@@ -848,7 +868,7 @@ programa
 		escrevaLento("\n\n\t° ")
 		escreva(dia)
 		escrevaLento(" de junho de 1996 °\n\n")
-		escrevaLento("\t~~ CRUISIN ~~\n\n\t")
+		escrevaLento("\t\t~~ CRUISIN ~~\n\n\t")
           escreva(distancia_fronteira)
           escrevaLento("KM para a fronteira\n\n")
 		escrevaLento("\t*  Energia = ")
@@ -856,7 +876,7 @@ programa
 		escrevaLento("  *\n")
 		escrevaLento("\t*  Dinheiro = $ ")
 		escreva(din)
-		escrevaLento("  *\n")
+		escrevaLento("  *\n")Ut.aguarde(2000)
 
 		escreva("╭────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮\n")
 		escreva("│                                                                                                                    │\n")
@@ -870,7 +890,7 @@ programa
 
 		ent_continuar()
 
-		escrevaLento("\n Enquanto você está dentro da limusine você vê uma reportagem da SONYA uma grande jornalista e apoiadora do TYRAK\n")
+		escrevaLento("\nEnquanto você está dentro da limusine você vê uma reportagem da SONYA uma grande jornalista e apoiadora do TYRAK\n")
 		escrevaLento("E por ironia do destino sentada do outro lado da limusine é justamente a SONYA que está te dando carona (kkkkk roteirinho fraco)\n\n")
 
 		escrevaLento("\n\n\t---------- VOCÊ CONHECEU SONYA ----------\n\n")
@@ -879,22 +899,30 @@ programa
 
 		escrevaLento("Tem um vinho no seu lado ele pode te dar um pouco de energia você quer beber?\n")
 		escrevaLento("(1)- Sim\n")
-		escrevaLento("(2)- Sim\n\n")
+		escrevaLento("(2)- Não\n\n")
 		leia(dialogo_escolha)
 
-		ganho = sorteia(0, 1)
+		escolha(dialogo_escolha)
+		{
+			caso 1:
+				ganho = sorteia(0, 1)
 
-		escrevaLento("\n\nVocê ganhou ")
-		escreva(ganho)
-		escrevaLento(" BARRAS DE ENERGIA")
+				escrevaLento("\n\nVocê ganhou ")
+				escreva(ganho)
+				escrevaLento(" BARRAS DE ENERGIA")
 
-		en = ganho + en
+				en = ganho + en
 		
-		escrevaLento("\n\n\t*  Energia = ")
-		escreva(en)
-		escrevaLento("  *\n\n")
+				escrevaLento("\n\n\t*  Energia = ")
+				escreva(en)
+				escrevaLento("  *\n\n")
 
-		ganho = 0
+				ganho = 0
+				pare
+
+			caso 2:
+				escrevaLento("\n\nPor algum motivo você não quis pegar energia de graça (?)")	
+		}
 		
 		escrevaLento("[1]- Obrigado pela carona\n")
 		escrevaLento("[2]- Nunca estive em uma limusine\n")
@@ -1177,6 +1205,13 @@ programa
 		escrevaLento("\t~~ CRUISIN ~~\n\n")
 		escrevaLento("\t-- FINALIZADO --\n\n")
 
+		se(escolha_capitulo == 1){
+			Ut.aguarde(2147483647)
+
+		}senao{
+
+		
+
 		dia = (sorteia(1, 2)) + dia
 
 		escrevaLento("Sonya: Queridinho, vou te levar para um pouco mais longe do que pretendia originalmente\n\n")
@@ -1199,6 +1234,7 @@ programa
 				verifica_energia()
 				pare	
 		}
+		}
 
 	distancia_fronteira = 9
 
@@ -1220,7 +1256,7 @@ programa
 		escrevaLento("\n\n\t° ")
 		escreva(dia)
 		escrevaLento(" de junho de 1996 °\n\n")
-		escrevaLento("\t~~ ROAD 96 ~~\n\n\t")
+		escrevaLento("\t\t~~ ROAD 96 ~~\n\n\t")
 		escreva(distancia_fronteira)
           escrevaLento("KM para a fronteira\n\n")
 		escrevaLento("\t*  Energia = ")
@@ -1228,7 +1264,7 @@ programa
 		escrevaLento("  *\n")
 		escrevaLento("\t*  Dinheiro = $ ")
 		escreva(din)
-		escrevaLento("  *\n\n")
+		escrevaLento("  *\n\n") Ut.aguarde(2000)
 
 
 		escreva("╭────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮\n")
